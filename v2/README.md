@@ -2,7 +2,7 @@
 
 This version preserves the existing Python engine and the locked GFS experiment.
 Its internal folder layout is retained so paths and benchmark hashes remain valid.
-Run all commands below from `versions/v2`.
+Run all commands below from `v2`.
 
 ## Install and test
 

@@ -8,10 +8,10 @@ from .common import (FREEZE, HISTORY_START, VARIABLES, digest, finite, read_json
 
 def locate_baseline(workspace):
     workspace = Path(workspace).resolve()
-    for root in (workspace, workspace / 'versions/v2'):
+    for root in (workspace / 'v2', workspace, workspace / 'versions/v2'):
         if (root / 'engine_v2/core.py').exists():
             return root
-    raise FileNotFoundError('V2 engine_v2 source not found in workspace or versions/v2')
+    raise FileNotFoundError('V2 engine_v2 source not found in v2, workspace or historical versions/v2')
 
 
 def baseline_context(workspace):

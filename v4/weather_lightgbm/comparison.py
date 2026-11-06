@@ -7,7 +7,7 @@ from .common import read_json, verify_files, wib
 
 def read_v3(workspace):
     workspace = Path(workspace)
-    roots = (workspace / 'versions/v2_catboost', workspace / 'version/v3',
+    roots = (workspace / 'v3', workspace / 'versions/v2_catboost', workspace / 'version/v3',
              workspace / '.repo-preparation/weather-forecasting/version/v3')
     for root in roots:
         output = root / 'output/benchmark_20261103_catboost'

@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 V3 = Path(__file__).resolve().parent
-REPO = V3.parents[1]
+REPO = V3.parent
 
 
 def digest(path):
@@ -22,7 +22,7 @@ def verify(directory, name):
 
 def main():
     v3 = verify(V3 / 'output/benchmark_20261103_catboost', 'candidate_lock.json')
-    v2 = verify(REPO / 'versions/v2/output/engine_v2/benchmark_20261103', 'benchmark_lock.json')
+    v2 = verify(REPO / 'v2/output/engine_v2/benchmark_20261103', 'benchmark_lock.json')
     meta = json.loads((V3 / 'graphs/graph_metadata.json').read_text(encoding='utf-8'))
     for filename, expected in meta['files'].items():
         if digest(V3 / 'graphs' / filename) != expected:

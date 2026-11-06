@@ -6,7 +6,7 @@ import math
 import os
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parent.parent
 V4 = Path(__file__).resolve().parent / 'output/benchmark_20261103_lightgbm'
 OUT = V4 / 'graphs'
 os.environ.setdefault('MPLCONFIGDIR', str(Path(__file__).resolve().parent / '.mpl-cache'))
@@ -19,8 +19,8 @@ import numpy as np
 
 WIB = dt.timezone(dt.timedelta(hours=7))
 STATIONS = ('X50', 'X51', 'X66', 'X67')
-V2 = ROOT / 'output/engine_v2/benchmark_20261103'
-V3 = ROOT / 'versions/v2_catboost/output/benchmark_20261103_catboost'
+V2 = ROOT / 'v2/output/engine_v2/benchmark_20261103'
+V3 = ROOT / 'v3/output/benchmark_20261103_catboost'
 
 
 def read(path):

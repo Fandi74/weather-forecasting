@@ -7,7 +7,7 @@ from pathlib import Path
 
 VERSION = 'engine_v4_lightgbm.1'
 VERSION_DIR = Path(__file__).resolve().parents[1]
-WORKSPACE = VERSION_DIR.parents[1]
+WORKSPACE = VERSION_DIR.parent
 WIB = dt.timezone(dt.timedelta(hours=7))
 UTC = dt.timezone.utc
 FREEZE = dt.datetime(2026, 11, 3, tzinfo=WIB).timestamp()

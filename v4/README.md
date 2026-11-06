@@ -15,7 +15,7 @@ Validation fitting ends before 1 October; four October weekly forecasts select
 methods. Final fitting uses only labels/assumed arrivals before 3 November midnight
 WIB. The forecast uses the same 2 November 06 UTC GFS run as V2/V3 for 3–9 November.
 October results are selection evidence, not an untouched test. November observations
-remain withheld. V4 may retain V2 or raw forecasts for a component where LightGBM
+were withheld when this snapshot was frozen. V4 may retain V2 or raw forecasts for a component where LightGBM
 does not improve the declared metric. V3 is excluded from V4 component selection.
 
 ## Verify the published snapshot
@@ -23,7 +23,7 @@ does not improve the declared metric. V3 is excluded from V4 component selection
 From the repository root, with the Python standard library:
 
 ```sh
-python version/v4/verify_package.py
+python v4/verify_package.py
 ```
 
 This verifies V4, V3 and V2 frozen files and all three comparison graph hashes.
@@ -32,10 +32,10 @@ It requires no private inputs or machine-learning dependencies.
 ## Install and test
 
 ```sh
-python -m venv version/v4/.venv
+python -m venv v4/.venv
 # Activate the environment for your shell, then:
-python -m pip install -r version/v4/requirements.lock.txt
-python -m unittest discover -s version/v4/tests -v
+python -m pip install -r v4/requirements.lock.txt
+python -m unittest discover -s v4/tests -v
 ```
 
 ## Original research workflow
@@ -45,14 +45,14 @@ recorded workspace paths. The portable fresh-clone check is verify_package.py.
 The sealed output cannot be rebuilt; new experiments require a different output.
 
 ```powershell
-$v4Python = './version/v4/.venv/Scripts/python.exe'
-& $v4Python -m unittest discover -s version/v4/tests -v
-& $v4Python version/v4/run.py build
-& $v4Python version/v4/run.py verify
-& $v4Python version/v4/run.py lock
+$v4Python = './v4/.venv/Scripts/python.exe'
+& $v4Python -m unittest discover -s v4/tests -v
+& $v4Python v4/run.py build
+& $v4Python v4/run.py verify
+& $v4Python v4/run.py lock
 ```
 
-The output is `version/v4/output/benchmark_20261103_lightgbm/`. Build needs the
+The output is `v4/output/benchmark_20261103_lightgbm/`. Build needs the
 existing V2 raw archive and normalized observations, plus V3's locked experiment.
 Each new experiment needs its own empty output directory; a locked candidate
 cannot be overwritten. Later `score --source-root PATH` verifies locks and uses
@@ -66,7 +66,7 @@ Hourly rain event is >=0.28 mm. Joint 6/12/24-hour probabilities remain unavaila
 Before locking, generate the shared-scale V2/V3/V4 graphs:
 
 ```powershell
-& $v4Python version/v4/make_graphs.py
+& $v4Python v4/make_graphs.py
 ```
 
 The graph renderer refuses to overwrite a locked experiment. The resulting
@@ -79,7 +79,7 @@ V2/raw components identified. Graphs and source are included in the candidate lo
 
 V4 retains V2 for X50/X66 rain amounts and X66 rain probability. X51/X67 use raw
 GFS. The images use the same GFS run, forecast intervals and axis ranges as V2/V3.
-October scores select methods; November benchmark accuracy remains pending actuals.
+October scores select methods; These saved forecasts retain their original pre-evaluation state.
 
 - [Training report](output/benchmark_20261103_lightgbm/training_report.md)
 - [Validation comparison graph](output/benchmark_20261103_lightgbm/validation.png)

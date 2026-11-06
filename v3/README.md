@@ -13,7 +13,7 @@ V2 for X50 rain amount and raw GFS for X51/X67. X66 retains the sensor discrepan
 
 Both versions cover 3–9 November 2026 in 168 hourly intervals per location, using
 the same GFS run initialized on 2 November at 06:00 UTC. November measurements
-remain withheld. October results are model-selection evidence, not final accuracy.
+were withheld when this snapshot was frozen. October results are model-selection evidence, not final accuracy.
 
 ### Original V2
 
@@ -33,7 +33,7 @@ missing, so history-model validation gains may not transfer to this context.
 From the repository root, with Python 3.10 or newer:
 
 ```sh
-python version/v3/verify_package.py
+python v3/verify_package.py
 ```
 
 This standard-library check verifies every original candidate-lock entry, every
@@ -43,10 +43,10 @@ It needs no raw station data, provider archives or machine-learning dependencies
 ## Source and dependencies
 
 ```sh
-python -m venv version/v3/.venv
+python -m venv v3/.venv
 # Activate the virtual environment for your shell, then:
-python -m pip install -r version/v3/requirements.lock.txt
-python -m unittest discover -s version/v3/tests -v
+python -m pip install -r v3/requirements.lock.txt
+python -m unittest discover -s v3/tests -v
 ```
 
 `run.py` and `weather_catboost/` preserve the training/verification/scoring workflow.
