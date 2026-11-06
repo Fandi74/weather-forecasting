@@ -15,6 +15,7 @@ weather-forecasting/
 ├── v2/
 ├── v3/
 ├── v4/
+├── v5/
 ├── results/
 └── docs/
 ```
@@ -24,9 +25,44 @@ weather-forecasting/
 | [v2](v2/README.md) | Frozen original baseline | GFS correction and blind 3–9 November 2026 benchmark |
 | [v3](v3/README.md) | Frozen CatBoost candidate | Existing-input and station-history experiments; selected methods and all trained variants |
 | [v4](v4/README.md) | Frozen LightGBM candidate | Same V2 data and V3 feature design; independently trained LightGBM variants |
+| [v5](v5/README.md) | Frozen humidity candidate | X66 hsht ensemble; exact V2 temperature, rain amount and rain probability |
 
 Each version owns its source, dependencies, tests and experiment artifacts.
 Earlier locked models and predictions are preserved.
+
+## V5 humidity improvement — X66
+
+V5 combines **V2 humidity**, a **V3-style CatBoost humidity learner retrained on
+hsht**, and a **V4-style LightGBM humidity learner retrained on hsht**, with one
+third weight each. October development validation selected this combination:
+MAE improved from **7.282 to 6.739 percentage points** over 326 later-October cases.
+Final tree learners use 3,507 pre-cutoff examples. No November labels enter fitting
+or combination selection.
+
+For the previously revealed 3–6 November observations (84 matched hours):
+
+| Version | Humidity MAE, pp | Humidity RMSE, pp |
+| --- | ---: | ---: |
+| V2 | 8.98 | 11.85 |
+| V3 | 9.88 | 10.76 |
+| V4 | 12.04 | 13.40 |
+| **V5** | **4.11** | **5.90** |
+
+The new CatBoost hsht component alone scored 3.31 pp MAE on that November sample.
+V5 retains the combination selected using October. November is a development
+diagnostic because these observations were already revealed; later unseen data
+must confirm the gain. The humidity update applies to X66; other stations retain V2.
+
+**All 672 V5 temperature, rainfall amount and rain-probability values are exactly
+V2.** Rainfall tuning and sm/srm comparison remain reserved for V6.
+
+![X66 humidity observations versus V2 through V5](v5/output/evaluation_20261106/X66_humidity_actual_V2_V3_V4_V5.png)
+
+See the [V5 source and instructions](v5/README.md),
+[trained humidity models](v5/output/benchmark_20261103_humidity_v5/models/final/),
+[selected combination](v5/output/benchmark_20261103_humidity_v5/selection.json),
+[training report](v5/output/benchmark_20261103_humidity_v5/training_report.md),
+and [November comparison](v5/output/evaluation_20261106/report.md).
 
 ## X66 observed comparison: 3–6 November 2026
 
@@ -114,6 +150,8 @@ and [confirmed product scope](docs/PROJECT.md).
 ```sh
 # Verify all three frozen snapshots and comparison graphs; Python standard library only.
 python v4/verify_package.py
+# Verify V5 trained models, unchanged V2 components and humidity results.
+python v5/verify_package.py
 # Verify the published X66 observations and comparison metrics.
 python results/x66/20261106/verify_results.py
 ```

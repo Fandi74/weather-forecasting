@@ -1,0 +1,354 @@
+[
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "v2",
+    "model": {
+      "family": "v2",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        1,
+        0,
+        0
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "catboost_hsht",
+    "model": {
+      "family": "catboost_hsht",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        1,
+        0
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "lightgbm_hsht",
+    "model": {
+      "family": "lightgbm_hsht",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        0,
+        1
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "equal_three",
+    "model": {
+      "family": "equal_three",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "equal_trees",
+    "model": {
+      "family": "equal_trees",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        0.5,
+        0.5
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "v2_bias",
+    "model": {
+      "family": "v2_bias",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        1,
+        0,
+        0
+      ],
+      "bias_pp": -6.0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "convex",
+    "model": {
+      "family": "convex",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.006377455405295794,
+        0.6263471841111495,
+        0.36727536048355464
+      ],
+      "bias_pp": 0,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-20T00:00:00+07:00",
+    "family": "convex_bias",
+    "model": {
+      "family": "convex_bias",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.06160656878211804,
+        0.6219335021995869,
+        0.3164599290182951
+      ],
+      "bias_pp": -0.44625178937338106,
+      "training_rows": 334
+    },
+    "calibration_rows": 334,
+    "validation_rows": 168,
+    "max_calibration_label_available_wib": "2026-10-19T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "v2",
+    "model": {
+      "family": "v2",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        1,
+        0,
+        0
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "catboost_hsht",
+    "model": {
+      "family": "catboost_hsht",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        1,
+        0
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "lightgbm_hsht",
+    "model": {
+      "family": "lightgbm_hsht",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        0,
+        1
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "equal_three",
+    "model": {
+      "family": "equal_three",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "equal_trees",
+    "model": {
+      "family": "equal_trees",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0,
+        0.5,
+        0.5
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "v2_bias",
+    "model": {
+      "family": "v2_bias",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        1,
+        0,
+        0
+      ],
+      "bias_pp": -5.75,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "convex",
+    "model": {
+      "family": "convex",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.18496150519935076,
+        0.3550665042783144,
+        0.4599719905223348
+      ],
+      "bias_pp": 0,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  },
+  {
+    "issue_wib": "2026-10-27T00:00:00+07:00",
+    "family": "convex_bias",
+    "model": {
+      "family": "convex_bias",
+      "components": [
+        "v2_h",
+        "catboost_hsht_h",
+        "lightgbm_hsht_h"
+      ],
+      "weights": [
+        0.24586081484188727,
+        0.505729696382535,
+        0.24840948877557778
+      ],
+      "bias_pp": -0.9526125419658804,
+      "training_rows": 502
+    },
+    "calibration_rows": 502,
+    "validation_rows": 158,
+    "max_calibration_label_available_wib": "2026-10-26T23:00:08+07:00"
+  }
+]

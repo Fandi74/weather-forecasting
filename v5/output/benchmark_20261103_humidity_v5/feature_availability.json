@@ -1,0 +1,134 @@
+[
+  {
+    "issue": 1780938000,
+    "max_observation_available_at": null,
+    "max_prior_forecast_issue": null,
+    "latest_age_hours": null
+  },
+  {
+    "issue": 1781542800,
+    "max_observation_available_at": 1781539208.0,
+    "max_prior_forecast_issue": 1780938000,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1782147600,
+    "max_observation_available_at": 1782144008.0,
+    "max_prior_forecast_issue": 1781542800,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1782752400,
+    "max_observation_available_at": 1782748809.0,
+    "max_prior_forecast_issue": 1782147600,
+    "latest_age_hours": 1.9975
+  },
+  {
+    "issue": 1783357200,
+    "max_observation_available_at": 1783353608.0,
+    "max_prior_forecast_issue": 1782752400,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1783962000,
+    "max_observation_available_at": 1783958408.0,
+    "max_prior_forecast_issue": 1783357200,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1784566800,
+    "max_observation_available_at": 1784563208.0,
+    "max_prior_forecast_issue": 1783962000,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1785171600,
+    "max_observation_available_at": 1785168008.0,
+    "max_prior_forecast_issue": 1784566800,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1785776400,
+    "max_observation_available_at": 1785772808.0,
+    "max_prior_forecast_issue": 1785171600,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1786381200,
+    "max_observation_available_at": 1786377609.0,
+    "max_prior_forecast_issue": 1785776400,
+    "latest_age_hours": 1.9975
+  },
+  {
+    "issue": 1786986000,
+    "max_observation_available_at": 1786982408.0,
+    "max_prior_forecast_issue": 1786381200,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1787590800,
+    "max_observation_available_at": 1787587208.0,
+    "max_prior_forecast_issue": 1786986000,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1788195600,
+    "max_observation_available_at": 1788192008.0,
+    "max_prior_forecast_issue": 1787590800,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1788800400,
+    "max_observation_available_at": 1788796808.0,
+    "max_prior_forecast_issue": 1788195600,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1789405200,
+    "max_observation_available_at": 1789401608.0,
+    "max_prior_forecast_issue": 1788800400,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1790010000,
+    "max_observation_available_at": 1790006408.0,
+    "max_prior_forecast_issue": 1789405200,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1790614800,
+    "max_observation_available_at": 1790611208.0,
+    "max_prior_forecast_issue": 1790010000,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1791219600,
+    "max_observation_available_at": 1791216008.0,
+    "max_prior_forecast_issue": 1790614800,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1791824400,
+    "max_observation_available_at": 1791820808.0,
+    "max_prior_forecast_issue": 1791219600,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1792429200,
+    "max_observation_available_at": 1792425608.0,
+    "max_prior_forecast_issue": 1791824400,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1793034000,
+    "max_observation_available_at": 1793030408.0,
+    "max_prior_forecast_issue": 1792429200,
+    "latest_age_hours": 1.9977777777777779
+  },
+  {
+    "issue": 1793638800,
+    "max_observation_available_at": 1793610008.0,
+    "max_prior_forecast_issue": 1793034000,
+    "latest_age_hours": 8.997777777777777
+  }
+]
