@@ -15,6 +15,7 @@ weather-forecasting/
 ├── v2/
 ├── v3/
 ├── v4/
+├── results/
 └── docs/
 ```
 
@@ -26,6 +27,37 @@ weather-forecasting/
 
 Each version owns its source, dependencies, tests and experiment artifacts.
 Earlier locked models and predictions are preserved.
+
+## X66 observed comparison: 3–6 November 2026
+
+**V2 has the lowest temperature MAE and humidity MAE for this partial period.**
+V3 has the lowest humidity RMSE and follows humidity changes more closely.
+V2 and V4 tie for rain amount/probability because V4 retained those V2 components.
+
+The reference is **temperature = (t + tsht) / 2** and **humidity = hsht**.
+There are **84 matched hourly temperature/humidity targets** and **83 complete
+rain hours**, ending 6 November at 12:00 WIB. Lower errors are better.
+
+| Model | Temperature MAE, °C | Humidity MAE, pp | Humidity RMSE, pp | Rain RMSE, mm/hour |
+| --- | ---: | ---: | ---: | ---: |
+| V2 | **0.96** | **8.98** | 11.85 | **0.059** |
+| V3 — CatBoost | 3.33 | 9.88 | **10.76** | 0.209 |
+| V4 — LightGBM | 4.27 | 12.04 | 13.40 | **0.059** |
+
+Matched rain totals: **0.56 mm measured**, **2.41 mm V2/V4**, **5.87 mm V3**.
+Only two wet hours were observed; all versions missed those hours under the
+0.28 mm/hour forecast-amount threshold. These rain scores are dominated by dry hours.
+
+The two temperature sensors differ by **7.37°C on average**. The frozen models
+were trained against the earlier t/h stream; these results use the newly requested
+average/hsht reference. This is a reference-specific comparison over a partial
+week, not a universal model ranking. No model was refitted.
+
+![X66 observations versus frozen V2, V3 and V4](results/x66/20261106/X66_overlay_actual_V2_V3_V4.png)
+
+Read the [full X66 analysis](results/x66/20261106/README.md),
+[error and accumulated-rain graph](results/x66/20261106/X66_errors_and_rain_cumulative.png),
+and [matched observations and forecasts](results/x66/20261106/hourly_comparison.csv).
 
 ## V2, V3 and V4 prediction comparison
 
@@ -82,6 +114,8 @@ and [confirmed product scope](docs/PROJECT.md).
 ```sh
 # Verify all three frozen snapshots and comparison graphs; Python standard library only.
 python v4/verify_package.py
+# Verify the published X66 observations and comparison metrics.
+python results/x66/20261106/verify_results.py
 ```
 
 See [V2 instructions](v2/README.md), [V3 instructions](v3/README.md)

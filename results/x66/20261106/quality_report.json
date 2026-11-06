@@ -1,0 +1,55 @@
+{
+  "raw_rows": 502,
+  "first_observation_wib": "2026-11-03T00:00:08+07:00",
+  "last_observation_wib": "2026-11-06T12:00:08+07:00",
+  "errors": {
+    "E3 E8 E12": 502
+  },
+  "quality_counts": {
+    "rain_valid_10min_intervals": 500,
+    "rain_sampling_gap": 1,
+    "rain_complete_hours": 83,
+    "rain_incomplete_hours": 1
+  },
+  "gaps": [
+    {
+      "start_wib": "2026-11-06T11:00:08+07:00",
+      "end_wib": "2026-11-06T11:40:08+07:00",
+      "start_unix": 1793937608.0,
+      "end_unix": 1793940008.0,
+      "gap_minutes": 40.0,
+      "counter_before": 489.0,
+      "counter_after": 489.0
+    }
+  ],
+  "recorded_rf_sum_mm": 0.56,
+  "counter_change_mm": 0.56,
+  "t_minus_tsht_mean_c": -7.3746215139442235,
+  "t_minus_tsht_mae_c": 7.3746215139442235,
+  "t_minus_tsht_min_c": -7.68,
+  "t_minus_tsht_max_c": -6.990000000000002,
+  "t": {
+    "valid": 502,
+    "min": 9.59,
+    "max": 20.11,
+    "mean": 13.09918326693227
+  },
+  "tsht": {
+    "valid": 502,
+    "min": 16.97,
+    "max": 27.23,
+    "mean": 20.473804780876495
+  },
+  "h": {
+    "valid": 502,
+    "min": 100.0,
+    "max": 100.0,
+    "mean": 100.0
+  },
+  "hsht": {
+    "valid": 502,
+    "min": 60.0,
+    "max": 100.0,
+    "mean": 87.25298804780877
+  }
+}
