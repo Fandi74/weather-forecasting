@@ -1,0 +1,101 @@
+{
+  "variant": "lightgbm_base_exact",
+  "variable": "rain",
+  "feature_names": [
+    "gfs_temperature_c",
+    "gfs_humidity_pct",
+    "gfs_rain_mm",
+    "local_hour_sin",
+    "local_hour_cos",
+    "forecast_day_band"
+  ],
+  "training_rows": 2721,
+  "parameters": {
+    "num_boost_round": 400,
+    "max_depth": 4,
+    "num_leaves": 15,
+    "learning_rate": 0.04,
+    "lambda_l2": 10.0,
+    "min_data_in_leaf": 50,
+    "feature_fraction": 1.0,
+    "bagging_fraction": 1.0,
+    "bagging_freq": 0,
+    "seed": 2601106,
+    "num_threads": 4,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "occurrence": {
+    "kind": "model",
+    "path": "models/validation/X66/lightgbm_base_exact/rain/occurrence.txt"
+  },
+  "positive_amount": {
+    "kind": "model",
+    "path": "models/validation/X66/lightgbm_base_exact/rain/positive_amount.txt"
+  },
+  "kind": "hurdle",
+  "wet_training_rows": 32,
+  "feature_importance": [
+    {
+      "component": "occurrence",
+      "feature": "gfs_temperature_c",
+      "importance": 26.87151000846987
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_humidity_pct",
+      "importance": 20.926820479756373
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_rain_mm",
+      "importance": 27.636105292582396
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_sin",
+      "importance": 8.676389685700679
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_cos",
+      "importance": 6.099849279245399
+    },
+    {
+      "component": "occurrence",
+      "feature": "forecast_day_band",
+      "importance": 9.789325254245282
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_temperature_c",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_humidity_pct",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_rain_mm",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_sin",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_cos",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "forecast_day_band",
+      "importance": 0.0
+    }
+  ]
+}

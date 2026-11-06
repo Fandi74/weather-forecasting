@@ -1,0 +1,890 @@
+{
+  "name": "V4 LightGBM import",
+  "version_path": "version/v4",
+  "original_v2_changed": false,
+  "original_v3_changed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4622,
+      "sha256": "c2acc49453575883b0f312fed7a65eb49281ccd95ee85f0d83ac8e0c513a67c1",
+      "git_blob_sha": "2257d760fe05b49d4a8c5f4d1b3a8464b3074dd3"
+    },
+    {
+      "path": "version/v4/.gitignore",
+      "bytes": 73,
+      "sha256": "8e8e32de56741e442f1fbcd51cab22c13e123800490b390cfd9601f59cbeb813",
+      "git_blob_sha": "f911c2a73a57808305fe762a13879e7d4335f8e2"
+    },
+    {
+      "path": "version/v4/make_graphs.py",
+      "bytes": 10619,
+      "sha256": "28cab7cf3b299006c12bfef293f24142c7dab1c76416e8b5505f3b2096be9a2a",
+      "git_blob_sha": "c83772f12c734542a8413b528ca345fb81dd84f7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/baseline_reference.json",
+      "bytes": 3686,
+      "sha256": "56e8f983224667b709da0cba9d2f53c25164e260f8c7053ed4de0884af836a4e",
+      "git_blob_sha": "d1bf98693708d1719ce92167188cef67d94d4282"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/candidate_lock.json",
+      "bytes": 16336,
+      "sha256": "7c5c0c01d5abe850d7efcd66e22949bd9f4594fa6ff85451e5ada8bd4d5f0f8a",
+      "git_blob_sha": "cf82958cc34c91764157f52d0348b5cd06357db8"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/daily_forecasts.csv",
+      "bytes": 4431,
+      "sha256": "3fb579413f4de931ffbf40d5914e3cb8e5c13b254bcb89d7674f4328957998fa",
+      "git_blob_sha": "8053ebaae7261442aa12e1cbdc7b3811eb8ee8c5"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/environment.json",
+      "bytes": 221,
+      "sha256": "7174e9393c1693507812c5716ba59662af755db6a32bdb3d27d955bb20e510e6",
+      "git_blob_sha": "85fb382d5259d0991e2d2ebd5a7826f391c5cbd8"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/feature_availability.csv",
+      "bytes": 4352,
+      "sha256": "0c787f64f78ef8295d35fd01a7e0f81c65b91f3d039660f6d2a72574c28075d4",
+      "git_blob_sha": "43d74a9c1220bf12495220e445adf286a93010ee"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/forecast_windows.csv",
+      "bytes": 2989,
+      "sha256": "c1bcdeffe348cecde6c85053e65660b6a7d08df12cc4b194c08d5382b2e911c8",
+      "git_blob_sha": "4fed1cd4b83a5d200a1208cf8fef669371d6c11d"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/forecast_X50.png",
+      "bytes": 394644,
+      "sha256": "7cbff738e73a1475ecb010f92b730ed4898d91f1a372d5dfbf593608b4435a4b",
+      "git_blob_sha": "8e78402cb5db01e05addd0e5cdb1f744c7a34750"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/forecast_X66.png",
+      "bytes": 467876,
+      "sha256": "5b82ad4355b3d72a137bfef08b35f639cc16d40e8872c55c730a180d6d585630",
+      "git_blob_sha": "3d89b2201d31ec3d1aac1290bf9bed850abed65c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_features.json",
+      "bytes": 1324661,
+      "sha256": "2a18557f50e1e4bebf6fbf0800cbd2b0ad754dae426e47b0aebb1814f0be6abb",
+      "git_blob_sha": "c6f7fe54a03f517fd1dad87a37307af6c959dcff"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_forecasts.csv",
+      "bytes": 335715,
+      "sha256": "d2b5f6c35c821000be441059f76ceda52bf63b1a50c87aaeb7dd4db8c38c9535",
+      "git_blob_sha": "21440062cd171143810761d2a09ea3582252c1fe"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_predictions.json",
+      "bytes": 1186894,
+      "sha256": "67e53e0394a7becb912698ea6eb3648e88b0eec1ac50a2ca303055ba90f90436",
+      "git_blob_sha": "1c10242df698c44b43d2387290fe02906dcda1dd"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/make_graphs.py",
+      "bytes": 10619,
+      "sha256": "28cab7cf3b299006c12bfef293f24142c7dab1c76416e8b5505f3b2096be9a2a",
+      "git_blob_sha": "c83772f12c734542a8413b528ca345fb81dd84f7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/protocol.json",
+      "bytes": 4173,
+      "sha256": "b7582c02df4d04cc05601b8edf19ed9d421f4a0c77126924ce9698cbdcb9542e",
+      "git_blob_sha": "4bb4926b700a07b7b528738db8fb1294eb63e194"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/README.md",
+      "bytes": 2584,
+      "sha256": "2724416ccb8729d8940c9a42dd41c191fc4627fa5f08bbfc538df949354ae209",
+      "git_blob_sha": "9c51003064bcc4936562772e4e12c90a84e36f26"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/requirements.lock.txt",
+      "bytes": 247,
+      "sha256": "4e22cc14ed19740b7cd46b38f0f4b54ea4a15c4724cd536e0b0242c27166e77d",
+      "git_blob_sha": "7d5b06e723de9f9eca44d37b2347fd9470d45f09"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/requirements.txt",
+      "bytes": 76,
+      "sha256": "2507cbdd79e2f2ce531bfa7fc326c41f865c0eea95bbdc8d90ba2bf449cc737a",
+      "git_blob_sha": "3082a2f81efba09ef5d31ae353219a878c272834"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/run.py",
+      "bytes": 1302,
+      "sha256": "a0816012edfa89b445aa30ad44e2574162ed228f361ddaa2e1b419a597f3dc07",
+      "git_blob_sha": "89c834b5eb2345a04b21dc9e87bc7f9ec22578e4"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/tests/test_candidate.py",
+      "bytes": 11711,
+      "sha256": "4fde299c5ef2ff7988d49ad2021d24efc3b766a9abad62b3c41b0c877a116377",
+      "git_blob_sha": "aa1c1220787a794b00e43bfc4aef82f09e205fc0"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/__init__.py",
+      "bytes": 73,
+      "sha256": "b4e5a3afb5e782418300e0671137460b118ed531403b7dcc3ef59c831579080d",
+      "git_blob_sha": "454abdcc24590fd9e12a73ae110bd9f4c43e9284"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/common.py",
+      "bytes": 2310,
+      "sha256": "997424218c3ad4b0a2563aa21214d855957f6f9ad384c407111d7110f0fe0ce0",
+      "git_blob_sha": "385b5a65507bd05616a5206c24aa24436eb3893f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/comparison.py",
+      "bytes": 3084,
+      "sha256": "aaaff8e1b77177c3b78b782996f7fc593da6cdb222e192d36a77aa7eb8fd566b",
+      "git_blob_sha": "c8809cc44cfa474541997a345742e9fe08761b5a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/data.py",
+      "bytes": 5934,
+      "sha256": "6d8b0d15cbd18438f022ddbbf9e6b46d71b05d0ae224dc6175f20997cd5cf637",
+      "git_blob_sha": "e565ddb394184575b30a9541f266daba4c1db4fc"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/experiment.py",
+      "bytes": 26153,
+      "sha256": "7a8d233729f82fa6ce0a50b714db718770e311ed56de1b67fcb8047d96107978",
+      "git_blob_sha": "df9c8e789bc92a53e1747696da5688a53b5f9b2b"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/features.py",
+      "bytes": 5711,
+      "sha256": "0b526e440fd155e5566e41a52bac08dd53a551eda859d6cf1bfc48ad92c7565a",
+      "git_blob_sha": "d0ac09320f4803c825de79c02ce2f48c1660499e"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/learner.py",
+      "bytes": 4378,
+      "sha256": "e60b0f7ac835f5263c11e1d158b8f88017695a6c2edcf56112f96c2ee0a3e065",
+      "git_blob_sha": "201c3a300a5857810392d90046ae82b8d4f63f99"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/report.py",
+      "bytes": 15183,
+      "sha256": "9208eca7aaca0bd032a7a481163b267ef0ee99c5b7ddadad4d387ac57a75de06",
+      "git_blob_sha": "166e7655d4c31058d4201587ab454873efff63d9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/frozen_source/weather_lightgbm/scoring.py",
+      "bytes": 5613,
+      "sha256": "428ebf38a214f69fcd6aae33dc2d10c656cb00003a6bed7e0f96dad3965e519c",
+      "git_blob_sha": "b9e7b0d1b8f0b92efbe89fa18d1c2df3a7598ca7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/graphs/graph_metadata.json",
+      "bytes": 8387,
+      "sha256": "07ab39516b2339095c32dbbedbe93fa24e5cde81e3ec9bb01b8782eadd7ac69e",
+      "git_blob_sha": "65b1619db51894d15d907be5c2489d3ad64277f1"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/graphs/README.md",
+      "bytes": 880,
+      "sha256": "fc88fcdb5c119e757b12d831e66ad105824a651919d98efbb928486fb85046f3",
+      "git_blob_sha": "46181b98430d9b84add8be9d07edce9a4e375536"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/graphs/V2_prediction_7days.png",
+      "bytes": 466404,
+      "sha256": "2f8b3560995408d0649ae2b66fe537801a2ab2c7b8e98555d6bff318131ce17f",
+      "git_blob_sha": "b8c86ec2ec0fcbe341f53f4ca8f42be7f8f3e523"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/graphs/V3_prediction_7days.png",
+      "bytes": 493903,
+      "sha256": "98f75c50c6b48c7344d86055da51a52a7c3519f87d3b05dbf7e572c5f5cf2e00",
+      "git_blob_sha": "222c6e66cc7753ee53c05ffd4fe19aba406c649f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/graphs/V4_prediction_7days.png",
+      "bytes": 488822,
+      "sha256": "8823286a76dc4cca51329c405e3b3fd205263026563a56854349876da2b502e4",
+      "git_blob_sha": "1ae19e931977f1cf561652485233e63e6ae07b74"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/input_checksums.json",
+      "bytes": 6432,
+      "sha256": "ff109ab3bb8c16b6b4025240244b1c85cc2bd7a5968fb79dc279a72f5ba28aaf",
+      "git_blob_sha": "2e56f9899cb1be1fb48062c30fc33659ece3e1ff"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/humidity/descriptor.json",
+      "bytes": 1491,
+      "sha256": "80c6787dfc16490f59d99ed93428ec53456c3d7c55eb2610be0f72079e5cf3ed",
+      "git_blob_sha": "fa0962f1b42142a01023d6c565b3006d00763a0a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/humidity/residual.txt",
+      "bytes": 251606,
+      "sha256": "4ea01c49c6017382a0bb05c423f72dd7cef9405a885ff0f20fb611f92f273058",
+      "git_blob_sha": "de3befce2f935390aea6138544547ee04edd30f3"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/rain/descriptor.json",
+      "bytes": 2509,
+      "sha256": "56c573373b826c8e99993b1620aa05d9bb31a40fb1a3858d677460d330b897c5",
+      "git_blob_sha": "82666678d3dd2ea26d422cdcc42e02941218e4ac"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/rain/occurrence.txt",
+      "bytes": 523320,
+      "sha256": "5a2002827f5db271c8111c30db492bf48ad8835c16aff7352370779699e83a89",
+      "git_blob_sha": "ba3577bc96db14680d9fccfc58e66516d756c9a5"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/rain/positive_amount.txt",
+      "bytes": 224054,
+      "sha256": "1ad967091794278a62c0f52155246da3eb7a1feebf6851fb0fdf9fea0f8f516d",
+      "git_blob_sha": "dd3c93e414c6c1624d3d729979d7cc51d4b75008"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/temperature/descriptor.json",
+      "bytes": 1525,
+      "sha256": "d355001a59e30688647aa3e5209cf2bcf6b9a6e76b530edf70d1dd8657435d2d",
+      "git_blob_sha": "3595726a85a5a84aaf99a0e82c7504ac035951e0"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_exact/temperature/residual.txt",
+      "bytes": 458407,
+      "sha256": "409a06313d0aba92c3ef313a612ef46a7691168163b376f0daedd9ab15cc6ce0",
+      "git_blob_sha": "957eef4f9224e9feafed076b950c4fc847898ebb"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/humidity/descriptor.json",
+      "bytes": 1503,
+      "sha256": "2ff7f73016a515dbeabd8b70b9fafa1f0cb61019675d13eb25d85fd8ca030b34",
+      "git_blob_sha": "8cf927972f8e6573cdd354f69537e6684f56039e"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/humidity/residual.txt",
+      "bytes": 411448,
+      "sha256": "725fe303fa761a54481d24268ee4bcf68ee4c2f6a8b829ed2437c0d7afacdcc7",
+      "git_blob_sha": "3dde7dd71ebe521502d0c831aefa17b5e1606c6a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/rain/descriptor.json",
+      "bytes": 2510,
+      "sha256": "374a1ffafa760e6ffa9d555ab0ab599fdb7b6aa387c7cd604da4514b8f219d35",
+      "git_blob_sha": "8b1892de6dcc2439908d7deb2eae35aa2588a828"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/rain/occurrence.txt",
+      "bytes": 627406,
+      "sha256": "a382f7d0eb103f0dd5224c10af1ee067c39be94e8fd83908cc4a71401b9e2bf4",
+      "git_blob_sha": "11292acb368ee71ba55ddf8d424ae25566e6a343"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/rain/positive_amount.txt",
+      "bytes": 475559,
+      "sha256": "8dc9051256a0e26debb594d4e89fadf1fd0355ef7e424065ae3afb3578921f58",
+      "git_blob_sha": "384163905e84a6c8a9638deca38dacc3234166c6"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/temperature/descriptor.json",
+      "bytes": 1527,
+      "sha256": "bf1101b1c729ab6c6c8c898ecf2ffe5ec94c49d6ba79e7804ba07385a0d88760",
+      "git_blob_sha": "da6271ee4a540196a424b81b22b18d38e47465a0"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_base_full/temperature/residual.txt",
+      "bytes": 539082,
+      "sha256": "07e9829d0219f902d9e628d16ac7adc00c05d05758d11ab782f9f097fa4e1d36",
+      "git_blob_sha": "f7580e52c86adcafcd46b700f272957a9a4108d9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/humidity/descriptor.json",
+      "bytes": 8060,
+      "sha256": "fe33920a2450841bdac7ee962320e9a53e0e0f961114d320adf42e850ddb8813",
+      "git_blob_sha": "e93b3e8d317feaf523ac850fef468a3a8e85ed0f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/humidity/residual.txt",
+      "bytes": 288212,
+      "sha256": "a4ae07339070e82e0e81f7b48b70870b891fb72959e1505995ff08c3093900ed",
+      "git_blob_sha": "1b70ec16b20acb6910fcb31604d1056e42431001"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/rain/descriptor.json",
+      "bytes": 15488,
+      "sha256": "a276cfdb79aa92636479dc327ed66905aa56593c2dd5f72ef4b2f640a946c9e7",
+      "git_blob_sha": "ec2b70f0ad414de9259a2025809b4cc59b458314"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/rain/occurrence.txt",
+      "bytes": 536114,
+      "sha256": "4af04eaedc626816ca0cc48353a8fc0a596406b68242ffe3aafd9c75e4e673ad",
+      "git_blob_sha": "0b120bf9a13617b49a3b6fce7238434897d5445e"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/rain/positive_amount.txt",
+      "bytes": 231474,
+      "sha256": "32817e258636ed0017de4a518058d8449a818cf573be8f781890683662dd8aca",
+      "git_blob_sha": "5186c6f1f931b848cbdce2c891478c3bccf3f298"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/temperature/descriptor.json",
+      "bytes": 8414,
+      "sha256": "afb53d32d6f04efb83fc3244f540e083855e9b623729cde9c44ed1fb8ac20d21",
+      "git_blob_sha": "16792dd2f635c06cbe4ef03659128b67256505cd"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X50/lightgbm_history_exact/temperature/residual.txt",
+      "bytes": 490948,
+      "sha256": "ae5911ce9acb48bc60cb82661f0eab8b15841e6bf7824f9c0de4a5818b6b8e91",
+      "git_blob_sha": "2c3a12c3cd71461a615a61a7033fafc64572e2dc"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/humidity/descriptor.json",
+      "bytes": 1507,
+      "sha256": "ca7fb8d07d636519e8a17eb85d700c82347b53ea161d487c6f7ffcd682112352",
+      "git_blob_sha": "d7fea352647d1994a62fe3cea9ee5051be1822e9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/humidity/residual.txt",
+      "bytes": 313275,
+      "sha256": "14a15c6a45844a377e0c39f436533604e9a2ce665d6c16f1b2986f26dbb1b16b",
+      "git_blob_sha": "2b96111a49a7fa0d0ee4cd8f676cbb314431465d"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/rain/descriptor.json",
+      "bytes": 2421,
+      "sha256": "6f02d154f4e5ee23e5cfd758a21dff25e628929eb1eeaed1c98e4c2df5ac4468",
+      "git_blob_sha": "f352ddda1c4aca48837ca4a461240a4a3df53c3e"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/rain/occurrence.txt",
+      "bytes": 480801,
+      "sha256": "52e28b48783fe14a60305c5ad34d8a509efaaa824b188ba07f14c3a2fa9098b8",
+      "git_blob_sha": "d0536f3222f888985123b04620241ddeb67a0a8c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/rain/positive_amount.txt",
+      "bytes": 3177,
+      "sha256": "beadb0b1a03b14a47dde44a7c12085381bcb6d842edc8a8d94d54681d6e0361e",
+      "git_blob_sha": "6a2a41ae8e2364da559e503ade02d4ed3cfc634c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/temperature/descriptor.json",
+      "bytes": 1525,
+      "sha256": "a4dbeba77decebd45324e3ce4210709f96aa003357eb0e13554d99723829a03c",
+      "git_blob_sha": "b848c48cfe6b43604c30941aee3060ce100de7b3"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_exact/temperature/residual.txt",
+      "bytes": 404243,
+      "sha256": "1225040e3ea7bbd9fcd0ea9ba22400c4308cd76a26057ef4ecca356cef9c73f5",
+      "git_blob_sha": "a7b6f73f04d4a48f076d1273656d05286c18e641"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/humidity/descriptor.json",
+      "bytes": 1505,
+      "sha256": "df22dff8878e99e8cf94099c198c05ba40dee15740cbb273e64554ab05991723",
+      "git_blob_sha": "2cf87206536a4b698435268cd4889db5b25c3738"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/humidity/residual.txt",
+      "bytes": 386814,
+      "sha256": "d5fc7c7882ae719cfe27f8e32fc7b98ee697acd01c109cc203c258d1d1194df4",
+      "git_blob_sha": "2ee5c53640ecd5e36a2f1a639e158906e4678634"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/rain/descriptor.json",
+      "bytes": 2511,
+      "sha256": "cffbbb496e9eaaba930843fa551c0ac57d8a963a545e0c1c0e9d317edc15509c",
+      "git_blob_sha": "235010993c2ded0b3ddf936057c71b72031ef947"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/rain/occurrence.txt",
+      "bytes": 627757,
+      "sha256": "bf6b80b18346dc0d5d7c7fa4774c61da9c1eb936a85f0fb31eeae57cb711a07e",
+      "git_blob_sha": "d821c3f21abdfd26189372e30939c32bb904ea7e"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/rain/positive_amount.txt",
+      "bytes": 333819,
+      "sha256": "0d620c24bfec9146934d9f963aa648132b6f4fcaf5944d229dd2920cdc166698",
+      "git_blob_sha": "1e7269bd0828c3a14b647378ae9bbb433c51b4c2"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/temperature/descriptor.json",
+      "bytes": 1526,
+      "sha256": "ea9528ad01ff0f2062526fd9d9b828c90fbbff9ca866ccf1032eb2180ccd48b3",
+      "git_blob_sha": "5068899b7e72a8b3f1eb374718f363ff08d335cf"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_base_full/temperature/residual.txt",
+      "bytes": 525220,
+      "sha256": "dd3f0a2bb14a80a87a7358c7b8c6dedbf416d8af7060ce46d47362b6f8f3bc13",
+      "git_blob_sha": "f5ff03fa56f3b85e03ddc757aa9feff7d2fd6fd3"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/humidity/descriptor.json",
+      "bytes": 8131,
+      "sha256": "3135c4065a24ea70948be8ffa79426d84bf5fd58dacb22e376daae632242a022",
+      "git_blob_sha": "e3f4ce54dc704340ccb031d853e1efba39309138"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/humidity/residual.txt",
+      "bytes": 361820,
+      "sha256": "ded4ebfa4aa3adf10cbc4c7650b081e834294413dbd937339625f9c8f480dea0",
+      "git_blob_sha": "91e3897e82f4ac0a7bd2d92d918d11f39e747425"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/rain/descriptor.json",
+      "bytes": 15002,
+      "sha256": "02757de1f671d4b06ec582fc6ed6e35bea764965c6e9a3b093d490407b6acedb",
+      "git_blob_sha": "f3855553a491acd6ca5a9897232251a4bba78fd1"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/rain/occurrence.txt",
+      "bytes": 519569,
+      "sha256": "ef0b6e2fde64a28a2c14ae542cb6c2fc3e8ef7a0efa93d3fc9818d9db39c8ff2",
+      "git_blob_sha": "377ba5da19c0f2f44011a44d8180f42d0808cc6a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/rain/positive_amount.txt",
+      "bytes": 4133,
+      "sha256": "266fad4cc17e16eee3fca1a7f0b5699491be982b534bccfaa64f485588bffdf1",
+      "git_blob_sha": "3a4db350898f1af8302d0b8dd570e72f30ff101d"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/temperature/descriptor.json",
+      "bytes": 8332,
+      "sha256": "bfbf97e36cc73d506b4c4ae06a092365ea7bd3e1c7f6f37113b215a7cbd8c35f",
+      "git_blob_sha": "8858465de16198eea05b180c51560af288f1b475"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/final/X66/lightgbm_history_exact/temperature/residual.txt",
+      "bytes": 458147,
+      "sha256": "a1e6dc98633c0095c3790c7ce203e4314d7b5b83aaa7d6deef957f1226820e43",
+      "git_blob_sha": "0b07cf0b6d2739dffb782ffab988e5ec30df0200"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/humidity/descriptor.json",
+      "bytes": 1530,
+      "sha256": "88e3dabeb31a404aac6ad0571d45470eaa55bee7a750b2f851ad93da239e3f48",
+      "git_blob_sha": "671359e45c525fffc7a822c8f64d0af5ec8cfdf3"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/humidity/residual.txt",
+      "bytes": 258466,
+      "sha256": "9c119a5d96818aa102723c31b9b2cd754d4895336c3f56f19d0f000b5b24771a",
+      "git_blob_sha": "efb8293ed3e0cc56565d395ccf072c126e4a8b25"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/rain/descriptor.json",
+      "bytes": 2521,
+      "sha256": "e90f7c8916bf8a5176bbed04a469b75328c14d05bd6ab3ff6e5b506d34c728a0",
+      "git_blob_sha": "aa0a3bd225f5d1721e64d20495770cfac6d6ae55"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/rain/occurrence.txt",
+      "bytes": 475486,
+      "sha256": "d5b7dd991ddf06d0cc14b89cdbff29cdf3568f3072a36c73b050f78be987d4a9",
+      "git_blob_sha": "77603c1b9132171af96c50bc3819b52fa3da6e85"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/rain/positive_amount.txt",
+      "bytes": 178900,
+      "sha256": "7ded72b0984423962f17113945363c3f402bffe06f93dc33bcade064ebbda2ff",
+      "git_blob_sha": "d48cadd1b50a05b2250a1fa5abfaaccc479f3b3b"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/temperature/descriptor.json",
+      "bytes": 1531,
+      "sha256": "e5bf0ff8430e3976f9afcec55d9531791c0a54e79d6ae3bbf645e690eb128d6b",
+      "git_blob_sha": "9ec7ed1aa0a3f0807f4f38f82ab83d032160d2b0"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_exact/temperature/residual.txt",
+      "bytes": 440018,
+      "sha256": "156215fed15a80851dd048f3f68489686bbedb134eabedb2542f1645b6037a92",
+      "git_blob_sha": "ed14a6aad2a9758ad3c39e0f4221bbf8f02bb3a4"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/humidity/descriptor.json",
+      "bytes": 1511,
+      "sha256": "a427027bbfc811d8170e193030ffeb9c9e4a8e7f20c08016bda7d712ac5d3811",
+      "git_blob_sha": "ffd9df4f1ff93ba1303c05fdb15ce7a597f9ee99"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/humidity/residual.txt",
+      "bytes": 377256,
+      "sha256": "ab420638f963b9dc32348afa4b871969bf1aa443021e134a44578e3f81978c35",
+      "git_blob_sha": "0df367094317774254b08019c712c7e3384b9e53"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/rain/descriptor.json",
+      "bytes": 2519,
+      "sha256": "3fbcd76756de9b4fc70d3ba93f75db6f0202268ca8f72abe494beb164a15f1bb",
+      "git_blob_sha": "a9657f82b08f74746f71b5883b018f0cf65df41a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/rain/occurrence.txt",
+      "bytes": 622629,
+      "sha256": "c76999f567a94fa48bcb3c802b42ae939998148a7270ca651be1440a8bc1785d",
+      "git_blob_sha": "85e3beb91c61ef5a26345bd6b56ae8ebc7ed2ac9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/rain/positive_amount.txt",
+      "bytes": 465640,
+      "sha256": "2f3c68b00c918bcd2c80444fd4357268803e4f6e27d481e33296491da77e5ddc",
+      "git_blob_sha": "f238f8fc28dd19ad8e6d989f408030962364241c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/temperature/descriptor.json",
+      "bytes": 1529,
+      "sha256": "8730500af247d5bb0027b37c9153dc8790559e867524b0d8ceb4b631b5da91d4",
+      "git_blob_sha": "211d7d1bef9812c3c6aeb236449bffb426d4355f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_base_full/temperature/residual.txt",
+      "bytes": 519211,
+      "sha256": "a9260fb80143347066abd1a75c0f52f45deff8084c4ad93473bf11b55e877588",
+      "git_blob_sha": "e7fbe530ae267fb684cd1c1101c1f3160e417a06"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/humidity/descriptor.json",
+      "bytes": 8049,
+      "sha256": "a5798c6897a102a2ddd06d6ecda6d173f3e6d68e52ce443caf6e70d330833155",
+      "git_blob_sha": "dd2e99d71d77d0b534a90fb79ce8f25e4f092571"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/humidity/residual.txt",
+      "bytes": 258196,
+      "sha256": "d07e7f66ebbc20c540efdc4fc1b8a32080031ccbe40fe30b03b5dba28a693b79",
+      "git_blob_sha": "2683df5737c9e96fbfe5af3b62690690a958deb4"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/rain/descriptor.json",
+      "bytes": 15451,
+      "sha256": "563b5eb15488a86967e690d51da775325ab5df4367408f46f0f9ae0843427c0b",
+      "git_blob_sha": "a22d44f3b196729bc549337f8d6229378620017c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/rain/occurrence.txt",
+      "bytes": 507008,
+      "sha256": "05355e41aff8670875671c2218f092abecafce9786e651fdc9d803cc118a0962",
+      "git_blob_sha": "bbb540e7df7a286d9a9aec2da0a976905a3d2d7a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/rain/positive_amount.txt",
+      "bytes": 190894,
+      "sha256": "2cc8b3b3407d57f5dc24bcf97a6df24b85a5e4ad9082e19348becffd66519309",
+      "git_blob_sha": "501a6419a6118e2f9596122e815576b1f6f98294"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/temperature/descriptor.json",
+      "bytes": 8426,
+      "sha256": "913b21bc8447be5b264b612d152047202fd96d5b85479d3ba41900f4ff6e6e33",
+      "git_blob_sha": "ab706683106eb83ecb1d478594c3a36bdc13b52f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X50/lightgbm_history_exact/temperature/residual.txt",
+      "bytes": 495936,
+      "sha256": "1a6d6c1c826c1388296744c43e56e9e81a425a86d38c7673c3854754018e0e13",
+      "git_blob_sha": "a940392e1b0cf16f66fad4e8736b18bca6bb8d68"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/humidity/descriptor.json",
+      "bytes": 1527,
+      "sha256": "c980e5c4dee4a126ea1b041d3e6387bf44c8bf385f76986bb5f72d23b2d56c41",
+      "git_blob_sha": "320f374340eb018e190407146d2df446019fa313"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/humidity/residual.txt",
+      "bytes": 448034,
+      "sha256": "a62b3f206257aa69b5f8adc36fa5a0266f1840ac211f058aff137e99e7d7174e",
+      "git_blob_sha": "1dfda1ea41419bbc53a898e65ee3268610fa76c7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/rain/descriptor.json",
+      "bytes": 2432,
+      "sha256": "d18bc89d85f3fc89aa41236e503d8a91caacf0dfd3256881ad7532290d755135",
+      "git_blob_sha": "7be55bf00db8eb597a8c974e32e99d9645258dc5"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/rain/occurrence.txt",
+      "bytes": 432193,
+      "sha256": "04d96a39b2360b16ed8e1305b02e36e43995c3e897dcd9815a30bd88feb62e27",
+      "git_blob_sha": "102ecf919aa5fc71423a89a3fbcd1d9014b9a4a9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/rain/positive_amount.txt",
+      "bytes": 3177,
+      "sha256": "acd6a31a6b59508271d4f75b03ccfe5e49acd8835b62f0e75704867172e34894",
+      "git_blob_sha": "3a3840680602397cf08a1315abb30397a1f6a69c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/temperature/descriptor.json",
+      "bytes": 1531,
+      "sha256": "5fb9806c13d96501eaa9942115ba5faac3a54fd3112914abd3eca9075072a383",
+      "git_blob_sha": "5a7331f8e35f520e95cc4d849dd3d545d657e54f"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_exact/temperature/residual.txt",
+      "bytes": 387892,
+      "sha256": "22a6f6ceed97f94d17cb2c6f4285b138e5f4c4a3e1b26ea1176771747a29aa6b",
+      "git_blob_sha": "47e6be878c377e70c63c61a04c70294a6a53d10c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/humidity/descriptor.json",
+      "bytes": 1524,
+      "sha256": "d3abd436f87dd326a7b7084dd03bc4741c47da337ad48ce29589c977c2a9f846",
+      "git_blob_sha": "b795ec5cdc5545e44946d7ea09869f8138237685"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/humidity/residual.txt",
+      "bytes": 580612,
+      "sha256": "8a5d5f32f78d55981ecf5c581d1dede2bb915414f697af6b22a5c1cbc92656d9",
+      "git_blob_sha": "824f53a29862b416e428404e9f9f508b2bd9e1bb"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/rain/descriptor.json",
+      "bytes": 2519,
+      "sha256": "3f6c01c48fdc4a3a49758a28393872121ebe2316e4a0402dc9a694e604d4e0ad",
+      "git_blob_sha": "ff4d9995723d472369971e49fd2fdb52d22f9310"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/rain/occurrence.txt",
+      "bytes": 581048,
+      "sha256": "1c6fbd019f3d616f8e4af56fab24c096a4533977f499668c2bc51ec80f80bfab",
+      "git_blob_sha": "cc56399f52d036e34105f736af5d77ae87728ef7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/rain/positive_amount.txt",
+      "bytes": 195408,
+      "sha256": "88a670c258bcc24e86ec92bc9542ec76846aa07403eb899db9f36601dacabfc0",
+      "git_blob_sha": "ba4abff94c1065672b8a9b4ab4e589028d468848"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/temperature/descriptor.json",
+      "bytes": 1530,
+      "sha256": "f3842300113593e633fc333064296ba29f557e8a84c0da8869049eeb40bb4fba",
+      "git_blob_sha": "8ad65b076092b918333f6b647858137107d06c9b"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_base_full/temperature/residual.txt",
+      "bytes": 516343,
+      "sha256": "41a2ebd7182b912da87301dcd4f23e82f693395f11aeb03d808c28c701602a30",
+      "git_blob_sha": "075e42f1d7a044ed626b4f6e80481e4f970d3090"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/humidity/descriptor.json",
+      "bytes": 8315,
+      "sha256": "ad0c9c0a502d5f470a3e272c1d42d3d4296c8efd8dd64f314471737748f678de",
+      "git_blob_sha": "40e2a6999544efd8098af26ca8bd8974cc2b4d0a"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/humidity/residual.txt",
+      "bytes": 467064,
+      "sha256": "395e7359aff00664cb526d9aabab349a71cfd1ebf0ee9c7348de32f393300032",
+      "git_blob_sha": "13d47bdc1dca15eb1de3ecac897154f1a2df144c"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/rain/descriptor.json",
+      "bytes": 14989,
+      "sha256": "639db7eb5a812f0a03efa2ce4e482a3cc19c41badc8a0335090a9ce84915e2a0",
+      "git_blob_sha": "26b58846bea127ea668d03a30df6f38b634d8d46"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/rain/occurrence.txt",
+      "bytes": 533370,
+      "sha256": "69ba5fe97b020d47b7e93fb6740d8b0fbee44ca92be30635a75981133f12d7a3",
+      "git_blob_sha": "f4c826b7825ea00948afeac20b0b2e314915e242"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/rain/positive_amount.txt",
+      "bytes": 4133,
+      "sha256": "4310c169431ff79dca4c1cb5d0d968c84f10d63b088ce0d3bc0aa14fe5b55245",
+      "git_blob_sha": "5330c70f5ec8c85456d07035268b4c2aa783859b"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/temperature/descriptor.json",
+      "bytes": 8320,
+      "sha256": "6542079609b5d7c17376a85edf91084f676a4d2532881491e78e1a4cb110e212",
+      "git_blob_sha": "37b3a52175b1d1ec2f6f864cce1ed3c1cdf72f0d"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models/validation/X66/lightgbm_history_exact/temperature/residual.txt",
+      "bytes": 452422,
+      "sha256": "91566e5e4b433fdd0946426c37e0856fe447fe06818abcbeb043b8e4f1f53288",
+      "git_blob_sha": "2b7808ed97acac020d88612fe8afb514756e761d"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/models.json",
+      "bytes": 118618,
+      "sha256": "15094a67cb6dd6a30ee4d098d5be67c3d0b72863ffff489ade7c390d84f99d2f",
+      "git_blob_sha": "7317648ac888b75677f2bf90fe1d6c00596e3577"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/protocol.json",
+      "bytes": 4308,
+      "sha256": "6e127259323f248bf86d60ef9b50530ff045af8a566f7e51509d652b50d7235a",
+      "git_blob_sha": "724f2149aa05bb95c4d952aa6466106fea117de9"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/selection.json",
+      "bytes": 2993,
+      "sha256": "49f9eb1b2746a0186937916df115f51b7b25b054dbd8dfb04ea88297c850a4d7",
+      "git_blob_sha": "6e6e6711995a652ee147afb545485b06648350d7"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/station_support.json",
+      "bytes": 1059,
+      "sha256": "9b115f39d2126ffa15f10ba6c3ef2c669792c91e3062ba218b6feed5025bc3b0",
+      "git_blob_sha": "45b75e121535b07c05aaca3c19f4abeff2fb7b50"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/training_audit.json",
+      "bytes": 35741,
+      "sha256": "9a5dd7103968f6daf639e0c3d454cd8fb0a37aa0552b9fd02da00c995987f2db",
+      "git_blob_sha": "0a5a37768a7524ee9ed3a26c552846f614e26540"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/training_report.md",
+      "bytes": 10948,
+      "sha256": "d20d2461e385e29ae0cfe8496c93ff714b645581b2b4e27ebc0ca16f73537086",
+      "git_blob_sha": "82ba62ba7faa0dade842557f111b77ca8e0b3760"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/v3_reference.json",
+      "bytes": 15596,
+      "sha256": "25a03367d7fcbda86c79643336bd4395b2b3bbb41cf2a3d2cc89758aeece1186",
+      "git_blob_sha": "dc06846b319e2744406a925a2147c036a48bbbcc"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/validation.png",
+      "bytes": 183034,
+      "sha256": "e86eefd95f034bdc6d4d594fd5014b25ec39c8f91bdf3e7b6cfc1c3386593af0",
+      "git_blob_sha": "9bb4bd0d437893483e05445856ecd9627e1cad07"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/validation_predictions.csv",
+      "bytes": 2547210,
+      "sha256": "7509464b10a3e9f9cea6e381d141476449cc8af85dd247673e07ee1546b9bb52",
+      "git_blob_sha": "80693ddd7ac822dd852d0abd1807febedf305ee6"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/validation_scores.csv",
+      "bytes": 82954,
+      "sha256": "dc541fc6cb3193d3c4d0d26a95a75e64e11b013b845e95634fffcf5827dc0d69",
+      "git_blob_sha": "66f7c39e98326cfd806392224970f43af7721e13"
+    },
+    {
+      "path": "version/v4/output/benchmark_20261103_lightgbm/verification.json",
+      "bytes": 374,
+      "sha256": "e289c6f3c6341f97d5e57285073e67bf8f76025c98fc005eac20b2be09993348",
+      "git_blob_sha": "27fb9a1405d218d11480d20f9913e59c174db8bf"
+    },
+    {
+      "path": "version/v4/protocol.json",
+      "bytes": 4173,
+      "sha256": "b7582c02df4d04cc05601b8edf19ed9d421f4a0c77126924ce9698cbdcb9542e",
+      "git_blob_sha": "4bb4926b700a07b7b528738db8fb1294eb63e194"
+    },
+    {
+      "path": "version/v4/README.md",
+      "bytes": 4482,
+      "sha256": "6e52c9b4ec4a6a6f73409982e01788e9d373cae32843d4e7b768cd0a4c0393a5",
+      "git_blob_sha": "f1f94b9d58a1435b009dadba6f75e72603d18178"
+    },
+    {
+      "path": "version/v4/requirements.lock.txt",
+      "bytes": 247,
+      "sha256": "4e22cc14ed19740b7cd46b38f0f4b54ea4a15c4724cd536e0b0242c27166e77d",
+      "git_blob_sha": "7d5b06e723de9f9eca44d37b2347fd9470d45f09"
+    },
+    {
+      "path": "version/v4/requirements.txt",
+      "bytes": 76,
+      "sha256": "2507cbdd79e2f2ce531bfa7fc326c41f865c0eea95bbdc8d90ba2bf449cc737a",
+      "git_blob_sha": "3082a2f81efba09ef5d31ae353219a878c272834"
+    },
+    {
+      "path": "version/v4/run.py",
+      "bytes": 1302,
+      "sha256": "a0816012edfa89b445aa30ad44e2574162ed228f361ddaa2e1b419a597f3dc07",
+      "git_blob_sha": "89c834b5eb2345a04b21dc9e87bc7f9ec22578e4"
+    },
+    {
+      "path": "version/v4/tests/test_candidate.py",
+      "bytes": 11786,
+      "sha256": "2cee272d65c6583ea652421cb99920236393d501d0cb388f9b1f864a9f2d4f68",
+      "git_blob_sha": "85bb40bce2073770b7d188cf2f117e70c0dac03d"
+    },
+    {
+      "path": "version/v4/verify_package.py",
+      "bytes": 1523,
+      "sha256": "cd0b0243bdbcc28d682e44c928323d709026b8a7f945bd1a1aa27a6e8ffdf24f",
+      "git_blob_sha": "b544918a41fc9b5e74d739eefe36d436b2a7295a"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/__init__.py",
+      "bytes": 73,
+      "sha256": "b4e5a3afb5e782418300e0671137460b118ed531403b7dcc3ef59c831579080d",
+      "git_blob_sha": "454abdcc24590fd9e12a73ae110bd9f4c43e9284"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/common.py",
+      "bytes": 2310,
+      "sha256": "997424218c3ad4b0a2563aa21214d855957f6f9ad384c407111d7110f0fe0ce0",
+      "git_blob_sha": "385b5a65507bd05616a5206c24aa24436eb3893f"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/comparison.py",
+      "bytes": 3084,
+      "sha256": "aaaff8e1b77177c3b78b782996f7fc593da6cdb222e192d36a77aa7eb8fd566b",
+      "git_blob_sha": "c8809cc44cfa474541997a345742e9fe08761b5a"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/data.py",
+      "bytes": 5934,
+      "sha256": "6d8b0d15cbd18438f022ddbbf9e6b46d71b05d0ae224dc6175f20997cd5cf637",
+      "git_blob_sha": "e565ddb394184575b30a9541f266daba4c1db4fc"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/experiment.py",
+      "bytes": 26153,
+      "sha256": "7a8d233729f82fa6ce0a50b714db718770e311ed56de1b67fcb8047d96107978",
+      "git_blob_sha": "df9c8e789bc92a53e1747696da5688a53b5f9b2b"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/features.py",
+      "bytes": 5711,
+      "sha256": "0b526e440fd155e5566e41a52bac08dd53a551eda859d6cf1bfc48ad92c7565a",
+      "git_blob_sha": "d0ac09320f4803c825de79c02ce2f48c1660499e"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/learner.py",
+      "bytes": 4378,
+      "sha256": "e60b0f7ac835f5263c11e1d158b8f88017695a6c2edcf56112f96c2ee0a3e065",
+      "git_blob_sha": "201c3a300a5857810392d90046ae82b8d4f63f99"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/report.py",
+      "bytes": 15183,
+      "sha256": "9208eca7aaca0bd032a7a481163b267ef0ee99c5b7ddadad4d387ac57a75de06",
+      "git_blob_sha": "166e7655d4c31058d4201587ab454873efff63d9"
+    },
+    {
+      "path": "version/v4/weather_lightgbm/scoring.py",
+      "bytes": 5613,
+      "sha256": "428ebf38a214f69fcd6aae33dc2d10c656cb00003a6bed7e0f96dad3965e519c",
+      "git_blob_sha": "b9e7b0d1b8f0b92efbe89fa18d1c2df3a7598ca7"
+    }
+  ]
+}
