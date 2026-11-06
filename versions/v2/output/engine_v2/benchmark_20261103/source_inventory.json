@@ -1,0 +1,373 @@
+{
+  "cutoff_exclusive_wib": "2026-11-03T00:00:00+07:00",
+  "station_sources": {
+    "X50": [
+      {
+        "source": "C:\\Users\\isnad\\Documents\\Dayatani\\Forecast Data\\X50\\ThingsBoard_905f99c0-9d9f-11ef-a405-d769fcc61350_FAST_WIDE_20261102_153848.csv",
+        "sha256": "f3fd309df26dd23ade0e04ff0ba092b7cfc677a62bdc222a0b3ef8ce5fc73079",
+        "columns": [
+          "device_id",
+          "timestamp_ms",
+          "time_WIB",
+          "rid",
+          "br",
+          "bv",
+          "b",
+          "srm",
+          "sv",
+          "sm",
+          "ap",
+          "h",
+          "t",
+          "alt",
+          "rf",
+          "rfc",
+          "fds",
+          "st",
+          "lx",
+          "cal",
+          "sig",
+          "mi",
+          "cc",
+          "error",
+          "lat",
+          "lon",
+          "i2cfail"
+        ],
+        "device_ids": {
+          "905f99c0-9d9f-11ef-a405-d769fcc61350": 56458
+        },
+        "rows": 56458,
+        "unique_timestamps": 56458,
+        "duplicates": 0,
+        "conflicts": 0,
+        "invalid_timestamp_rows": 0,
+        "first_wib": "2024-12-06T15:21:53+07:00",
+        "last_wib": "2026-11-02T15:00:09+07:00",
+        "dates_after_cutoff": {},
+        "errors": {
+          "E1 E8": 6,
+          "NO ERRORS": 46199,
+          "E5": 10222,
+          "E16": 2,
+          "E11": 21,
+          "E5 E11": 8
+        },
+        "numeric_counts": {
+          "rf_numeric": 56458,
+          "rfc_numeric": 56458,
+          "t_numeric": 56452,
+          "h_numeric": 56449,
+          "ap_numeric": 56452
+        },
+        "gps": [
+          {
+            "time_wib": "2025-10-15T11:01:50+07:00",
+            "latitude": -7.397956371,
+            "longitude": 107.8342133
+          },
+          {
+            "time_wib": "2025-11-11T07:51:22+07:00",
+            "latitude": -7.398026943,
+            "longitude": 107.834198
+          },
+          {
+            "time_wib": "2026-04-08T10:01:18+07:00",
+            "latitude": -7.39793396,
+            "longitude": 107.834137
+          }
+        ]
+      }
+    ],
+    "X51": [
+      {
+        "source": "C:\\Users\\isnad\\Documents\\Dayatani\\Forecast Data\\X51\\ThingsBoard_93742cc0-9d9f-11ef-a405-d769fcc61350_FAST_WIDE_20261102_152724.csv",
+        "sha256": "1c6fb17b09e7a17f1fdc7d6168a6081f5dce4e94264fcb9daf32704a4e6f2080",
+        "columns": [
+          "device_id",
+          "timestamp_ms",
+          "time_WIB",
+          "rid",
+          "br",
+          "bv",
+          "b",
+          "srm",
+          "sv",
+          "sm",
+          "ap",
+          "h",
+          "t",
+          "alt",
+          "rf",
+          "rfc",
+          "fds",
+          "st",
+          "lx",
+          "cal",
+          "sig",
+          "mi",
+          "cc",
+          "error",
+          "lat",
+          "lon",
+          "i2cfail"
+        ],
+        "device_ids": {
+          "93742cc0-9d9f-11ef-a405-d769fcc61350": 46417
+        },
+        "rows": 46417,
+        "unique_timestamps": 46417,
+        "duplicates": 0,
+        "conflicts": 0,
+        "invalid_timestamp_rows": 0,
+        "first_wib": "2025-10-04T10:10:10+07:00",
+        "last_wib": "2026-08-25T14:00:10+07:00",
+        "dates_after_cutoff": {},
+        "errors": {
+          "NO ERRORS": 19704,
+          "E5": 8653,
+          "E8": 12286,
+          "E5 E8": 5774
+        },
+        "numeric_counts": {
+          "t_numeric": 46417,
+          "h_numeric": 46416,
+          "ap_numeric": 46417,
+          "rf_numeric": 46417,
+          "rfc_numeric": 46417
+        },
+        "gps": [
+          {
+            "time_wib": "2025-10-04T11:02:01+07:00",
+            "latitude": -7.371006966,
+            "longitude": 107.8115616
+          },
+          {
+            "time_wib": "2026-01-06T10:27:40+07:00",
+            "latitude": -7.37185812,
+            "longitude": 107.8113708
+          },
+          {
+            "time_wib": "2026-06-09T12:23:11+07:00",
+            "latitude": -7.371865273,
+            "longitude": 107.8114243
+          },
+          {
+            "time_wib": "2026-06-09T12:32:40+07:00",
+            "latitude": -7.371843338,
+            "longitude": 107.8114624
+          },
+          {
+            "time_wib": "2026-06-09T12:35:42+07:00",
+            "latitude": -7.371902943,
+            "longitude": 107.8115158
+          },
+          {
+            "time_wib": "2026-06-09T12:37:41+07:00",
+            "latitude": -7.371892452,
+            "longitude": 107.8114777
+          },
+          {
+            "time_wib": "2026-06-09T12:42:12+07:00",
+            "latitude": -7.371905327,
+            "longitude": 107.8113861
+          }
+        ]
+      }
+    ],
+    "X66": [
+      {
+        "source": "C:\\Users\\isnad\\Documents\\Dayatani\\Forecast Data\\X66\\ThingsBoard_15955490-112b-11f1-8347-3d92fc978ff9_FAST_WIDE_20261102_154533.csv",
+        "sha256": "d1e5406ffdc6f1d43a3dc070e632f4b2cbda0b1ff3fa1f09e510529e31bde29d",
+        "columns": [
+          "device_id",
+          "timestamp_ms",
+          "time_WIB",
+          "rid",
+          "br",
+          "bv",
+          "b",
+          "srm",
+          "sv",
+          "sm",
+          "ap",
+          "h",
+          "t",
+          "alt",
+          "rf",
+          "rfc",
+          "fds",
+          "st",
+          "lx",
+          "cal",
+          "sig",
+          "mi",
+          "cc",
+          "error",
+          "lat",
+          "lon",
+          "alt2",
+          "i2cfail",
+          "lrm",
+          "tsht",
+          "hsht"
+        ],
+        "device_ids": {
+          "15955490-112b-11f1-8347-3d92fc978ff9": 21037
+        },
+        "rows": 21037,
+        "unique_timestamps": 21037,
+        "duplicates": 0,
+        "conflicts": 0,
+        "invalid_timestamp_rows": 0,
+        "first_wib": "2026-06-09T12:02:01+07:00",
+        "last_wib": "2026-11-02T15:00:08+07:00",
+        "dates_after_cutoff": {},
+        "errors": {
+          "E3 E12": 9836,
+          "E3 E8 E12": 11058,
+          "E3 E8 E11 E12": 143
+        },
+        "numeric_counts": {
+          "t_numeric": 21037,
+          "h_numeric": 21037,
+          "ap_numeric": 11452,
+          "rf_numeric": 21037,
+          "rfc_numeric": 21037
+        },
+        "gps": [
+          {
+            "time_wib": "2026-06-09T12:02:01+07:00",
+            "latitude": -7.372810364,
+            "longitude": 107.8136597
+          }
+        ]
+      }
+    ],
+    "X67": [
+      {
+        "source": "C:\\Users\\isnad\\Documents\\Dayatani\\Forecast Data\\X67\\ThingsBoard_15955490-112b-11f1-8347-3d92fc978ff9_WIDE_20261102_142124.csv",
+        "sha256": "3bed544e6747b93e8ab9248002865ad0fba4ca7a486a49b860050e9e480708b0",
+        "columns": [
+          "device_id",
+          "timestamp_ms",
+          "time_WIB",
+          "rid",
+          "br",
+          "bv",
+          "b",
+          "srm",
+          "sv",
+          "sm",
+          "ap",
+          "h",
+          "t",
+          "alt",
+          "rf",
+          "rfc",
+          "fds",
+          "st",
+          "lx",
+          "cal",
+          "sig",
+          "mi",
+          "cc",
+          "error",
+          "lat",
+          "lon",
+          "alt2",
+          "i2cfail",
+          "lrm",
+          "tsht",
+          "hsht"
+        ],
+        "device_ids": {
+          "15955490-112b-11f1-8347-3d92fc978ff9": 21033
+        },
+        "rows": 21033,
+        "unique_timestamps": 21033,
+        "duplicates": 0,
+        "conflicts": 0,
+        "invalid_timestamp_rows": 0,
+        "first_wib": "2026-06-09T12:02:01+07:00",
+        "last_wib": "2026-11-02T14:20:08+07:00",
+        "dates_after_cutoff": {},
+        "errors": {
+          "E3 E12": 9836,
+          "E3 E8 E12": 11054,
+          "E3 E8 E11 E12": 143
+        },
+        "numeric_counts": {
+          "t_numeric": 21033,
+          "h_numeric": 21033,
+          "ap_numeric": 11452,
+          "rf_numeric": 21033,
+          "rfc_numeric": 21033
+        },
+        "gps": [
+          {
+            "time_wib": "2026-06-09T12:02:01+07:00",
+            "latitude": -7.372810364,
+            "longitude": 107.8136597
+          }
+        ]
+      }
+    ]
+  },
+  "cross_station_overlap": [
+    {
+      "stations": [
+        "X50",
+        "X51"
+      ],
+      "common_timestamps": 22171,
+      "identical_weather_and_error": 0,
+      "identical_fraction": 0.0
+    },
+    {
+      "stations": [
+        "X50",
+        "X66"
+      ],
+      "common_timestamps": 86,
+      "identical_weather_and_error": 0,
+      "identical_fraction": 0.0
+    },
+    {
+      "stations": [
+        "X50",
+        "X67"
+      ],
+      "common_timestamps": 86,
+      "identical_weather_and_error": 0,
+      "identical_fraction": 0.0
+    },
+    {
+      "stations": [
+        "X51",
+        "X66"
+      ],
+      "common_timestamps": 27,
+      "identical_weather_and_error": 0,
+      "identical_fraction": 0.0
+    },
+    {
+      "stations": [
+        "X51",
+        "X67"
+      ],
+      "common_timestamps": 27,
+      "identical_weather_and_error": 0,
+      "identical_fraction": 0.0
+    },
+    {
+      "stations": [
+        "X66",
+        "X67"
+      ],
+      "common_timestamps": 21033,
+      "identical_weather_and_error": 21033,
+      "identical_fraction": 1.0
+    }
+  ]
+}

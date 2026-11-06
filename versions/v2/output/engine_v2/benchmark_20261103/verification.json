@@ -1,0 +1,26 @@
+{
+  "verified_at_utc": "2026-11-05T07:25:45.413124+00:00",
+  "checks": [
+    "One complete year, 8760 targets per location; only explicit GFS; history ends before cutoff",
+    "All individual GFS runs initialized before freeze; no 3/4/5 November update",
+    "Every fitted target and assumed observation arrival precedes benchmark start",
+    "672 finite forecast intervals, correct endpoints/bounds; X51/X67 use raw fallback",
+    "CSV values reconcile with frozen JSON; 28 daily totals and 16 horizon summaries reconcile",
+    "Four full-year CSV tables preserve 8760 hourly targets and 21 forecast series each",
+    "Blinded actuals absent; historical headline error independently reconciled",
+    "All archived forecast and accepted original station checksums verified",
+    "Report preserves reference warning and pending benchmark status; all plot artifacts present"
+  ],
+  "passed": true,
+  "forecast_rows": 672,
+  "annual_hours_per_location": {
+    "X50": 8760,
+    "X51": 8760,
+    "X66": 8760,
+    "X67": 8760
+  },
+  "model_sha256": "95b68013b7ced909e902d7a19007cfe745a1d5ab69cd8bd11f1aab52ff19eb7a",
+  "predictions_sha256": "d257de80b8e31ff89beca65df15e2720d143fc8c21c86f333f26e9098df7d6f5",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.3.5"
+}

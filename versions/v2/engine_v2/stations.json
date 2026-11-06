@@ -1,0 +1,6 @@
+{
+  "X50": {"latitude": -7.397703, "longitude": 107.833976, "elevation_m": 1230, "elevation_note": "user estimate", "expected_device_id": "905f99c0-9d9f-11ef-a405-d769fcc61350"},
+  "X51": {"latitude": -7.371024609, "longitude": 107.8115768, "elevation_m": 1190, "elevation_note": "user supplied, not surveyed", "expected_device_id": "93742cc0-9d9f-11ef-a405-d769fcc61350"},
+  "X66": {"latitude": -7.372810364, "longitude": 107.8136597, "elevation_m": 1299, "elevation_note": "user supplied, not surveyed", "expected_device_id": "15955490-112b-11f1-8347-3d92fc978ff9"},
+  "X67": {"latitude": -7.404071808, "longitude": 107.8261642, "elevation_m": 1161, "elevation_note": "user supplied, not surveyed", "expected_device_id": null}
+}
