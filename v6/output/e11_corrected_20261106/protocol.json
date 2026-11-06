@@ -1,0 +1,17 @@
+{
+  "version": "engine_v6_rainfall.2",
+  "status": "Post-clarification retrospective development comparison",
+  "E11_policy": "Retain available finite positive raw srm under the user-described threshold flag; keep missing/flagged sm unavailable. Missing raw ADC is never imputed.",
+  "numeric_threshold_hardcoded": false,
+  "user_threshold_estimate": "Approximately 7000, unconfirmed; existing E11 flags are respected without recomputing a cutoff",
+  "timestamp_interpretation": "CSV-assigned timestamp; measurement versus server-arrival semantics not confirmed",
+  "timing_cases_seconds": [
+    3600,
+    0
+  ],
+  "zero_delay_status": "Sensitivity assuming availability at the assigned CSV time, not a confirmed delivery fact",
+  "rain_labels_and_case_partitions": "Original conservative label receipt and identical case IDs retained to isolate feature changes",
+  "model_routing_sha256": "c7e059577ead8f59881d14e1956e62fff8d21d115a7b27eba430d80150e0d036",
+  "routing_and_hyperparameters_changed": false,
+  "prior_results_used_for_model_selection": false
+}

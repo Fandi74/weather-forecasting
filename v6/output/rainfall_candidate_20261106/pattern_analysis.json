@@ -1,0 +1,88 @@
+{
+  "station_patterns": {
+    "X50": {
+      "checked_wet_10min_with_soil": 241,
+      "wet_10min_immediate_srm_drop": 139,
+      "checked_dry_10min_with_soil": 12727,
+      "dry_10min_immediate_srm_drop": 6292,
+      "onset_soil_response": {
+        "10": {
+          "onsets": 66,
+          "any_drop": 46,
+          "drop_at_least_1pct": 15,
+          "drop_at_least_5pct": 8
+        },
+        "30": {
+          "onsets": 65,
+          "any_drop": 50,
+          "drop_at_least_1pct": 24,
+          "drop_at_least_5pct": 13
+        },
+        "60": {
+          "onsets": 65,
+          "any_drop": 53,
+          "drop_at_least_1pct": 33,
+          "drop_at_least_5pct": 19
+        },
+        "180": {
+          "onsets": 58,
+          "any_drop": 51,
+          "drop_at_least_1pct": 38,
+          "drop_at_least_5pct": 30
+        }
+      },
+      "hourly_pairs_for_soil_check": 2124,
+      "significant_drop_hours": 415,
+      "possible_gauge_disagreement_hours": 9,
+      "ambiguous_wetting_no_gauge_rain_hours": 391
+    },
+    "X66": {
+      "checked_wet_10min_with_soil": 124,
+      "wet_10min_immediate_srm_drop": 82,
+      "checked_dry_10min_with_soil": 12929,
+      "dry_10min_immediate_srm_drop": 7571,
+      "onset_soil_response": {
+        "10": {
+          "onsets": 36,
+          "any_drop": 27,
+          "drop_at_least_1pct": 12,
+          "drop_at_least_5pct": 4
+        },
+        "30": {
+          "onsets": 35,
+          "any_drop": 29,
+          "drop_at_least_1pct": 16,
+          "drop_at_least_5pct": 5
+        },
+        "60": {
+          "onsets": 35,
+          "any_drop": 29,
+          "drop_at_least_1pct": 17,
+          "drop_at_least_5pct": 8
+        },
+        "180": {
+          "onsets": 32,
+          "any_drop": 27,
+          "drop_at_least_1pct": 18,
+          "drop_at_least_5pct": 10
+        }
+      },
+      "hourly_pairs_for_soil_check": 2158,
+      "significant_drop_hours": 125,
+      "possible_gauge_disagreement_hours": 9,
+      "ambiguous_wetting_no_gauge_rain_hours": 96
+    }
+  },
+  "cross_station": {
+    "matched_complete_hours": 2136,
+    "X50_wet_hours": 120,
+    "X66_wet_hours": 62,
+    "both_wet_hours": 46,
+    "X50_only_wet_hours": 74,
+    "X66_only_wet_hours": 16,
+    "X50_total_mm_matched": 198.8,
+    "X66_total_mm_matched": 110.32000000000001,
+    "hourly_amount_correlation": 0.8097384937685054
+  },
+  "interpretation": "Soil drops support wetting evidence; neither a drop nor nearby rain confirms rain at the target or provides rainfall mm. No labels are mirrored or imputed."
+}

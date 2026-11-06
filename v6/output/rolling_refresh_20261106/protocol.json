@@ -1,0 +1,12 @@
+{
+  "status": "Follow-up retrospective development diagnostic; schedule chosen after first static-fit review",
+  "refit_dates_wib": [
+    "2026-10-20T00:00:00+07:00",
+    "2026-10-27T00:00:00+07:00"
+  ],
+  "routing": "Original 1\u201319 October validation selection unchanged",
+  "routing_sha256": "c7e059577ead8f59881d14e1956e62fff8d21d115a7b27eba430d80150e0d036",
+  "hyperparameters_changed": false,
+  "soil_receipt_delay_seconds": 3600,
+  "new_test_based_model_selection": false
+}

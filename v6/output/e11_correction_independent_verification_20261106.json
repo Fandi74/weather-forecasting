@@ -1,0 +1,65 @@
+{
+  "prior_locked_experiments": {
+    "earlier_versions": {
+      "V2": {
+        "files": 34,
+        "lock_sha256": "c36b6d44c3ab9cd102c9a91c857f0d6b9c2fdac8ad319f5f26f828f788c78d78",
+        "forecast_sha256": "d257de80b8e31ff89beca65df15e2720d143fc8c21c86f333f26e9098df7d6f5"
+      },
+      "V3": {
+        "files": 119,
+        "lock_sha256": "1215c195446b23ca456008d1b887ca391750bb73ae2900677f1ddbe84db7ccfe",
+        "forecast_sha256": "2b9533c600f417a49bf0b96c9e0789a30d704d81db4686e19e2a76eb3849a06b"
+      },
+      "V4": {
+        "files": 127,
+        "lock_sha256": "7c5c0c01d5abe850d7efcd66e22949bd9f4594fa6ff85451e5ada8bd4d5f0f8a",
+        "forecast_sha256": "67e53e0394a7becb912698ea6eb3648e88b0eec1ac50a2ca303055ba90f90436"
+      },
+      "V5": {
+        "files": 35,
+        "lock_sha256": "600763ab2e5fc6429684ee1dbb717e443eabb5f96b02009903dd1413c21a74ff",
+        "forecast_sha256": "23b7bed6b77f8fcc1b972f0540656a3f236dc167a1ea8972b26a864e980ad6f8"
+      }
+    },
+    "rainfall_candidate_20261106": {
+      "lock_sha256": "3a814f3b1df15ca69b13b2b4eac4a4f008b488b84ea8b458e6566346d9e70c87",
+      "files": 64
+    },
+    "rolling_refresh_20261106": {
+      "lock_sha256": "5735ed4d44da58ee0fa5488a7b17e16cea0498c564b877298844d7fa4b6df0c8",
+      "files": 52
+    }
+  },
+  "new_locked_files_verified": 104,
+  "scenario_verification": {
+    "raw_srm_1h": {
+      "same_cases_and_targets": 2314,
+      "independent_metric_rows": 80
+    },
+    "raw_srm_timestamp": {
+      "same_cases_and_targets": 2314,
+      "independent_metric_rows": 80
+    }
+  },
+  "feature_availability_records": {
+    "raw_srm_1h": 4234,
+    "raw_srm_timestamp": 4234
+  },
+  "all_declared_feature_cutoffs_respected": true,
+  "all_training_label_cutoffs_respected": true,
+  "raw_source_hashes_unchanged": true,
+  "model_parameters_and_training_case_counts_unchanged": true,
+  "summary": {
+    "raw_srm_1h": {
+      "selected_rmse_better_than_raw_gfs_groups": 0,
+      "neighbor_rain_brier_better_than_weather_only_groups": 8,
+      "network_soil_brier_better_than_network_rain_groups": 3
+    },
+    "raw_srm_timestamp": {
+      "selected_rmse_better_than_raw_gfs_groups": 1,
+      "neighbor_rain_brier_better_than_weather_only_groups": 8,
+      "network_soil_brier_better_than_network_rain_groups": 4
+    }
+  }
+}

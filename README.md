@@ -16,6 +16,7 @@ weather-forecasting/
 ├── v3/
 ├── v4/
 ├── v5/
+├── v6/
 ├── results/
 └── docs/
 ```
@@ -26,9 +27,51 @@ weather-forecasting/
 | [v3](v3/README.md) | Frozen CatBoost candidate | Existing-input and station-history experiments; selected methods and all trained variants |
 | [v4](v4/README.md) | Frozen LightGBM candidate | Same V2 data and V3 feature design; independently trained LightGBM variants |
 | [v5](v5/README.md) | Frozen humidity candidate | X66 hsht ensemble; exact V2 temperature, rain amount and rain probability |
+| [v6](v6/README.md) | Experimental rainfall candidate | X50/X66 rain and soil history; initial, weekly and E11-corrected models; V5 temperature/humidity retained |
 
 Each version owns its source, dependencies, tests and experiment artifacts.
 Earlier locked models and predictions are preserved.
+
+## V6 rainfall research — X50 and X66
+
+**V6 remains experimental: rainfall amount is not consistently more accurate than
+raw GFS.** It uses the 6 August–6 November station exports to study rain, `sm` and
+`srm`, and learns 1/6/12/24-hour rain occurrence and amount using fixed LightGBM
+designs. Nearby recent rain helps occurrence prediction more consistently than
+adding soil signals. Temperature and humidity retain all 672 V5 values exactly.
+
+| Later-period development comparison | Amount RMSE lower than raw GFS | Nearby-rain Brier lower than weather-only learner |
+| --- | ---: | ---: |
+| Initial fixed fit | 1/8 groups | 8/8 groups |
+| Weekly refresh | 0/8 groups | 8/8 groups |
+| E11-corrected, assumed +1h availability | 0/8 groups | 8/8 groups |
+| E11-corrected, assumed CSV-time availability | 1/8 groups | 8/8 groups |
+
+Groups are two stations × four forecast windows, not independent storms. The
+same 2,314 later-period windows are scored. Follow-ups were explored after seeing
+earlier results, so these are development comparisons, not untouched blind tests.
+
+E11 is treated as the user-described threshold flag: available positive raw
+`srm` is retained, missing `sm` stays missing, and no 7000 cutoff is imposed.
+After correction, SRM declines within an hour of 53/65 eligible X50 rain onsets
+and 33/41 at X66. It also falls without recorded rain, so soil changes alone
+cannot identify rain versus manual fertigation or supply rainfall millimetres.
+
+![Rain and mirrored SRM examples](v6/output/review_20261106/wetting_examples.png)
+
+The CSV contains assigned timestamps, without a separate arrival field. The
+earlier +1h availability delay was an assumption. Both timing cases below exclude
+future timestamps; CSV-time availability is a sensitivity, not confirmed live
+delivery behavior. Lower Brier scores indicate better rain probabilities.
+
+![V6 E11 and timestamp comparison](v6/output/e11_corrected_20261106/rain_probability_e11_timing.png)
+
+See [V6 instructions and findings](v6/README.md),
+[three-month rain/soil overview](v6/output/rainfall_candidate_20261106/rain_soil_patterns_3months.png),
+[corrected experiment report](v6/output/e11_corrected_20261106/report.md),
+[corrected final rainfall models](v6/output/e11_corrected_20261106/raw_srm_1h/models/final/),
+[stronger-control comparison](v6/output/review_20261106/review.md),
+and [publication manifest](v6/publication.json).
 
 ## V5 humidity improvement — X66
 
@@ -54,7 +97,7 @@ diagnostic because these observations were already revealed; later unseen data
 must confirm the gain. The humidity update applies to X66; other stations retain V2.
 
 **All 672 V5 temperature, rainfall amount and rain-probability values are exactly
-V2.** Rainfall tuning and sm/srm comparison remain reserved for V6.
+V2.** The separate V6 rainfall experiments are described above.
 
 ![X66 humidity observations versus V2 through V5](v5/output/evaluation_20261106/X66_humidity_actual_V2_V3_V4_V5.png)
 
@@ -152,6 +195,8 @@ and [confirmed product scope](docs/PROJECT.md).
 python v4/verify_package.py
 # Verify V5 trained models, unchanged V2 components and humidity results.
 python v5/verify_package.py
+# Verify V6 models, rainfall metrics and preserved V5 temperature/humidity.
+python v6/verify_package.py
 # Verify the published X66 observations and comparison metrics.
 python results/x66/20261106/verify_results.py
 ```
@@ -167,7 +212,7 @@ The repository includes source, trained models, frozen forecasts, reports, plots
 derived GFS history and sealed packages. Raw station exports, raw provider-response
 archives, local databases and runtime/download caches remain outside Git.
 The import manifests and frozen source are historical records and retain their
-original paths. Current entry points are `v2/`, `v3/` and `v4/`; the
+original paths. Current entry points are separate `v2/` through `v6/` folders; the
 [layout migration record](LAYOUT_MIGRATION.json) records the folder correction.
 Some original provenance records contain local filesystem paths and historical
 pre-publication notes. See [V2 data requirements](v2/DATA.md).

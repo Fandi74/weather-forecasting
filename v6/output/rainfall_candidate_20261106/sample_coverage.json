@@ -1,0 +1,23 @@
+{
+  "stage_counts": {
+    "train": 9860,
+    "purged_boundary": 125,
+    "validation": 3368,
+    "test": 2314,
+    "november_diagnostic": 564
+  },
+  "label_sources": {
+    "complete_rf_intervals": 15445,
+    "counter_endpoints_packet_continuity": 786
+  },
+  "omissions": {
+    "missing_gfs_window": 1014,
+    "X50_missing_rain_window": 321,
+    "X66_missing_rain_window": 90
+  },
+  "training_cases": 9860,
+  "training_unique_gauge_window_ends": 2645,
+  "training_signature": "64875ef63c3b2a5c200b3f86818392125aece5f56ad5292fc8fb27852e82bde4",
+  "validation_signature": "718cea8c2f02ea51a306542c395413901d1b6c63ddeedf14bc174b5231e17f11",
+  "test_signature": "504a76690ba576dc8a1f6bba3e3c03a4e91f716551a30006aca6715a35267146"
+}

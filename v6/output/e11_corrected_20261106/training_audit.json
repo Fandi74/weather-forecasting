@@ -1,0 +1,182 @@
+[
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "gfs",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "local_rain",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "local_rain_soil",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "network_rain",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "network_rain_soil",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "gfs",
+    "model_refitted": false,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "local_rain",
+    "model_refitted": false,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "local_rain_soil",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "network_rain",
+    "model_refitted": false,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_1h",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "network_rain_soil",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "gfs",
+    "model_refitted": false,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "local_rain",
+    "model_refitted": true,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "local_rain_soil",
+    "model_refitted": true,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "network_rain",
+    "model_refitted": true,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-20T00:00:00+07:00",
+    "family": "network_rain_soil",
+    "model_refitted": true,
+    "training_cases": 13322,
+    "training_case_signature": "eff403085504e4033e7ad24155502b0a8f5cc39a00dabacf67d082fab2f1f3b5",
+    "max_training_label_available_wib": "2026-10-19T23:00:17+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "gfs",
+    "model_refitted": false,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "local_rain",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "local_rain_soil",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "network_rain",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  },
+  {
+    "scenario": "raw_srm_timestamp",
+    "fit_cutoff_exclusive_wib": "2026-10-27T00:00:00+07:00",
+    "family": "network_rain_soil",
+    "model_refitted": true,
+    "training_cases": 14542,
+    "training_case_signature": "c34bc1b583f871d8f7566d3ac85bd7e7441b280c5adf4c67942715d972d4dcdc",
+    "max_training_label_available_wib": "2026-10-26T23:00:10+07:00"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "X50": {
+    "source": "C:\\Users\\isnad\\Documents\\X50.csv",
+    "sha256": "a4b349d9521703fda9d8e83c7069d1401f08feff48f540f773abe3f6f9aa4f97",
+    "readings": 13049,
+    "first_wib": "2026-08-06T16:20:09+07:00",
+    "last_wib": "2026-11-06T16:00:10+07:00",
+    "error_counts": {
+      "NO ERRORS": 10933,
+      "E5": 2086,
+      "E11": 21,
+      "E16": 1,
+      "E5 E11": 8
+    },
+    "quality_counts": {
+      "sampling_gap": 33,
+      "counter_reset": 1,
+      "clock_alignment": 1,
+      "complete_hours": 2140,
+      "incomplete_hours": 68
+    },
+    "valid_soil_readings": 13019,
+    "raw_recorded_rain_mm": 203.56,
+    "checked_ten_minute_rain_mm": 202.72,
+    "complete_hour_rain_mm": 198.8,
+    "gaps_gt_15_minutes": 33
+  },
+  "X66": {
+    "source": "C:\\Users\\isnad\\Documents\\X66.csv",
+    "sha256": "d582c231e28ecfc1bc789f7e142cd14d0792a9d8554f52b392a6a5ac10f5c553",
+    "readings": 13226,
+    "first_wib": "2026-08-06T16:20:08+07:00",
+    "last_wib": "2026-11-06T14:00:08+07:00",
+    "error_counts": {
+      "E3 E12": 1458,
+      "E3 E8 E12": 11625,
+      "E3 E8 E11 E12": 143
+    },
+    "quality_counts": {
+      "sampling_gap": 2,
+      "complete_hours": 2202,
+      "incomplete_hours": 4
+    },
+    "valid_soil_readings": 13083,
+    "raw_recorded_rain_mm": 124.88000000000001,
+    "checked_ten_minute_rain_mm": 124.88000000000001,
+    "complete_hour_rain_mm": 124.60000000000001,
+    "gaps_gt_15_minutes": 2
+  }
+}
