@@ -1,0 +1,25 @@
+{
+  "family": "equal_three",
+  "best_development_family": "equal_three",
+  "accepted_humidity_update": true,
+  "baseline_mae": 7.282208588957055,
+  "best_mae": 6.739115882363559,
+  "improvement_pp": 0.5430927065934963,
+  "selection_metric": "MAE",
+  "selection_status": "October development validation; November actuals excluded",
+  "model": {
+    "family": "equal_three",
+    "components": [
+      "v2_h",
+      "catboost_hsht_h",
+      "lightgbm_hsht_h"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "bias_pp": 0,
+    "training_rows": 662
+  }
+}

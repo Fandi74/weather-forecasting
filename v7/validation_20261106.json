@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "version": "engine_v7_combined.1",
+  "frozen_v7_files": 32,
+  "earlier_frozen_files_unchanged": 535,
+  "copied_component_files": 16,
+  "unchanged_temperature_humidity_rows": 672,
+  "combined_window_rows": 16,
+  "v6_rainfall_windows": 8,
+  "models_retrained": false,
+  "independent_float_hex_point_comparisons": 1344,
+  "independent_merged_point_comparisons": 32,
+  "direct_rain_values_match_copied_v6_inference": true,
+  "rainfall_model_replay_identical": true,
+  "integration_tests_passed": 11,
+  "created_locally_not_pushed": true,
+  "runtime_entrypoint_sha256": "4370e41ff0ebc4fed20075e10f99abd060b5bffa2a2a354fc645d591144e5fc5",
+  "replay_fix": "Replay scratch is confined to the V7 workspace folder; original build-source snapshot is retained"
+}

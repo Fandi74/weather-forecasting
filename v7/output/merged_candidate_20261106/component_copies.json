@@ -1,0 +1,82 @@
+[
+  {
+    "source": "v5/output/benchmark_20261103_humidity_v5/selection.json",
+    "copy": "models/humidity_selection.json",
+    "sha256": "5379698a07517ca211ac20f72f9561b3d574a47ae071144e95e7c37e6c072722"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/model_catalog.json",
+    "copy": "models/rainfall_catalog.json",
+    "sha256": "dd67ef0bc01e37dd5c2c22e8bf05f74597ed5b5972bf153ced9bde6bae56b07e"
+  },
+  {
+    "source": "v6/output/rainfall_candidate_20261106/selection.json",
+    "copy": "models/rainfall_selection.json",
+    "sha256": "c7e059577ead8f59881d14e1956e62fff8d21d115a7b27eba430d80150e0d036"
+  },
+  {
+    "source": "output/engine_v2/benchmark_20261103/models.json",
+    "copy": "models/temperature/v2_models.json",
+    "sha256": "95b68013b7ced909e902d7a19007cfe745a1d5ab69cd8bd11f1aab52ff19eb7a"
+  },
+  {
+    "source": "v5/output/benchmark_20261103_humidity_v5/models/final/catboost/humidity.cbm",
+    "copy": "models/humidity/catboost/humidity.cbm",
+    "sha256": "1978cc11351d56a83bcbd2a8ad2ab97613784432c51aaf7250d252202eecbec5"
+  },
+  {
+    "source": "v5/output/benchmark_20261103_humidity_v5/models/final/lightgbm/humidity.txt",
+    "copy": "models/humidity/lightgbm/humidity.txt",
+    "sha256": "82145cc75b8a34e69397ff535bfc4199a544632d4275fc9a30dd9451212b9d17"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/baselines.json",
+    "copy": "models/rainfall/baselines.json",
+    "sha256": "fe7afce9c52181eac7e6421bfdf3992b75dc440c53427bec9cd4062ec94ba987"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain/descriptor.json",
+    "copy": "models/rainfall/local_rain/descriptor.json",
+    "sha256": "f8c0465c315b42f9f404580e1301e787cc896ec5cb4001a5b07e246c724338b8"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain/occurrence.txt",
+    "copy": "models/rainfall/local_rain/occurrence.txt",
+    "sha256": "bbcd520d453616e4a6983def05a4a3da95d2f23c9896aae86ed551be6e65e4b1"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain/positive_amount.txt",
+    "copy": "models/rainfall/local_rain/positive_amount.txt",
+    "sha256": "8d941c8d0750d9e0c6cab8b1bfd05a9ca5af6b13644915dc0ca795932f257645"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain_soil/descriptor.json",
+    "copy": "models/rainfall/local_rain_soil/descriptor.json",
+    "sha256": "edc6bc9913549d013d704f0ddc473026ff269fa31dc3012d1db02e8870615cd0"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain_soil/occurrence.txt",
+    "copy": "models/rainfall/local_rain_soil/occurrence.txt",
+    "sha256": "11c21b17a15495ca55a4c5cd94ad5a2136d24b48b9830cd9520fa836945dfde2"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/local_rain_soil/positive_amount.txt",
+    "copy": "models/rainfall/local_rain_soil/positive_amount.txt",
+    "sha256": "b06a6346d23698f3942bcc89e8e502f9169bc497b01f5c2371662d029e5b7e68"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/network_rain_soil/descriptor.json",
+    "copy": "models/rainfall/network_rain_soil/descriptor.json",
+    "sha256": "7c9a73726d41c44b462f74638395683cb664284fe55dfdfda44b3740e5122a3f"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/network_rain_soil/occurrence.txt",
+    "copy": "models/rainfall/network_rain_soil/occurrence.txt",
+    "sha256": "6a21e1090f692c74337b7bb61ea2ca3aa086a05dbca7da8a874d173f206d4631"
+  },
+  {
+    "source": "v6/output/e11_corrected_20261106/raw_srm_1h/models/final/network_rain_soil/positive_amount.txt",
+    "copy": "models/rainfall/network_rain_soil/positive_amount.txt",
+    "sha256": "bf6a1e64aeaa68f0ea64e3647b99e09c2c485cc791a6f731ed66cd4247af35e5"
+  }
+]

@@ -17,6 +17,7 @@ weather-forecasting/
 ├── v4/
 ├── v5/
 ├── v6/
+├── v7/
 ├── results/
 └── docs/
 ```
@@ -28,9 +29,46 @@ weather-forecasting/
 | [v4](v4/README.md) | Frozen LightGBM candidate | Same V2 data and V3 feature design; independently trained LightGBM variants |
 | [v5](v5/README.md) | Frozen humidity candidate | X66 hsht ensemble; exact V2 temperature, rain amount and rain probability |
 | [v6](v6/README.md) | Experimental rainfall candidate | X50/X66 rain and soil history; initial, weekly and E11-corrected models; V5 temperature/humidity retained |
+| [v7](v7/README.md) | Combined V5/V6 candidate | V5 humidity + corrected V6 rainfall; V2 temperature retained, with documented limits and exact component checks |
 
 Each version owns its source, dependencies, tests and experiment artifacts.
 Earlier locked models and predictions are preserved.
+
+## V7: V5 humidity + V6 rainfall
+
+V7 combines the existing V5 humidity component with corrected V6 rainfall,
+while keeping V2 temperature exactly. It reuses the trained components without
+new fitting or model selection. **This merge does not establish a new accuracy
+gain; V6 rainfall remains experimental.**
+
+| Component | Coverage |
+| --- | --- |
+| V5 humidity ensemble | X66; other stations retain their V5/V2 fallback |
+| Corrected V6 rainfall | X50/X66, with the original selected model/control routes |
+| Temperature | All existing V5 values, inherited from V2 |
+| Other station rain | Existing X51/X67 amounts; multi-hour probabilities are null |
+
+The included retrospective 3 November issue has **672 unchanged hourly
+temperature/humidity points** and **16 combined 1/6/12/24-hour forecasts**.
+Temperature/humidity are values at each window end. Rain is a whole-window total,
+not a guessed hourly distribution; the rain windows cover the initial 24 hours.
+
+![V7 combines V5 humidity and V6 rainfall](v7/output/merged_candidate_20261106/V7_merged_forecasts.png)
+
+**Limits:** no new combined accuracy benchmark; November observations were
+already revealed; rainfall amount has not consistently beaten raw GFS; station
+coverage is limited; +1h reading availability is assumed; SRM wetting can also
+be manual fertigation. Overlapping rain windows are not additive and do not
+establish a coherent joint predictive distribution. V7 has no automatic live
+forecast pipeline.
+
+Read the [V7 overview](v7/README.md), [usage and input/output guide](v7/docs/USAGE.md),
+[architecture and selected routes](v7/docs/ARCHITECTURE.md),
+[full limitations](v7/docs/LIMITATIONS.md), and
+[validation evidence](v7/docs/VALIDATION.md).
+Models, results, graph, tests, frozen source/audits and a publication verifier
+are included. Eleven integration tests pass; component replay matches and all
+535 earlier frozen files remain unchanged.
 
 ## V6 rainfall research — X50 and X66
 
@@ -197,6 +235,8 @@ python v4/verify_package.py
 python v5/verify_package.py
 # Verify V6 models, rainfall metrics and preserved V5 temperature/humidity.
 python v6/verify_package.py
+# Verify V7 composition, copied models and inherited values.
+python v7/verify_package.py
 # Verify the published X66 observations and comparison metrics.
 python results/x66/20261106/verify_results.py
 ```
@@ -212,7 +252,7 @@ The repository includes source, trained models, frozen forecasts, reports, plots
 derived GFS history and sealed packages. Raw station exports, raw provider-response
 archives, local databases and runtime/download caches remain outside Git.
 The import manifests and frozen source are historical records and retain their
-original paths. Current entry points are separate `v2/` through `v6/` folders; the
+original paths. Current entry points are separate `v2/` through `v7/` folders; the
 [layout migration record](LAYOUT_MIGRATION.json) records the folder correction.
 Some original provenance records contain local filesystem paths and historical
 pre-publication notes. See [V2 data requirements](v2/DATA.md).

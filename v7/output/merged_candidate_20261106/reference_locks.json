@@ -1,0 +1,30 @@
+{
+  "V2": {
+    "files": 34,
+    "lock_sha256": "c36b6d44c3ab9cd102c9a91c857f0d6b9c2fdac8ad319f5f26f828f788c78d78"
+  },
+  "V3": {
+    "files": 119,
+    "lock_sha256": "1215c195446b23ca456008d1b887ca391750bb73ae2900677f1ddbe84db7ccfe"
+  },
+  "V4": {
+    "files": 127,
+    "lock_sha256": "7c5c0c01d5abe850d7efcd66e22949bd9f4594fa6ff85451e5ada8bd4d5f0f8a"
+  },
+  "V5": {
+    "files": 35,
+    "lock_sha256": "600763ab2e5fc6429684ee1dbb717e443eabb5f96b02009903dd1413c21a74ff"
+  },
+  "V6_initial": {
+    "files": 64,
+    "lock_sha256": "3a814f3b1df15ca69b13b2b4eac4a4f008b488b84ea8b458e6566346d9e70c87"
+  },
+  "V6_weekly": {
+    "files": 52,
+    "lock_sha256": "5735ed4d44da58ee0fa5488a7b17e16cea0498c564b877298844d7fa4b6df0c8"
+  },
+  "V6_E11": {
+    "files": 104,
+    "lock_sha256": "4bb77a02670b9a94a2704f969e061393690a8deb9ff0620b1e6c68d0017b9866"
+  }
+}
