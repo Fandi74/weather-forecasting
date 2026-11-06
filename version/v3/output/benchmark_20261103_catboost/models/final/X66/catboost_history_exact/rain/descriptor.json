@@ -1,0 +1,648 @@
+{
+  "variant": "catboost_history_exact",
+  "variable": "rain",
+  "feature_names": [
+    "gfs_temperature_c",
+    "gfs_humidity_pct",
+    "gfs_rain_mm",
+    "local_hour_sin",
+    "local_hour_cos",
+    "forecast_day_band",
+    "t_latest",
+    "t_age_hours",
+    "t_3h_value",
+    "t_3h_coverage",
+    "t_6h_value",
+    "t_6h_coverage",
+    "t_12h_value",
+    "t_12h_coverage",
+    "t_24h_value",
+    "t_24h_coverage",
+    "t_change_3h",
+    "t_error_3h",
+    "t_error_3h_count",
+    "t_error_6h",
+    "t_error_6h_count",
+    "t_error_24h",
+    "t_error_24h_count",
+    "h_latest",
+    "h_age_hours",
+    "h_3h_value",
+    "h_3h_coverage",
+    "h_6h_value",
+    "h_6h_coverage",
+    "h_12h_value",
+    "h_12h_coverage",
+    "h_24h_value",
+    "h_24h_coverage",
+    "h_change_3h",
+    "h_error_3h",
+    "h_error_3h_count",
+    "h_error_6h",
+    "h_error_6h_count",
+    "h_error_24h",
+    "h_error_24h_count",
+    "rain_latest",
+    "rain_age_hours",
+    "rain_3h_value",
+    "rain_3h_coverage",
+    "rain_6h_value",
+    "rain_6h_coverage",
+    "rain_12h_value",
+    "rain_12h_coverage",
+    "rain_24h_value",
+    "rain_24h_coverage",
+    "rain_error_3h",
+    "rain_error_3h_count",
+    "rain_error_6h",
+    "rain_error_6h_count",
+    "rain_error_24h",
+    "rain_error_24h_count"
+  ],
+  "training_rows": 3504,
+  "parameters": {
+    "iterations": 400,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 10.0,
+    "random_seed": 2601106,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "has_time": true,
+    "bootstrap_type": "No",
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "occurrence": {
+    "kind": "model",
+    "path": "models/final/X66/catboost_history_exact/rain/occurrence.cbm"
+  },
+  "positive_amount": {
+    "kind": "model",
+    "path": "models/final/X66/catboost_history_exact/rain/positive_amount.cbm"
+  },
+  "kind": "hurdle",
+  "wet_training_rows": 87,
+  "feature_importance": [
+    {
+      "component": "occurrence",
+      "feature": "gfs_temperature_c",
+      "importance": 7.781483429891925
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_humidity_pct",
+      "importance": 11.19386251126961
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_rain_mm",
+      "importance": 10.76335627231019
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_sin",
+      "importance": 4.356887693537465
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_cos",
+      "importance": 2.8934231521988787
+    },
+    {
+      "component": "occurrence",
+      "feature": "forecast_day_band",
+      "importance": 10.186600029615096
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_latest",
+      "importance": 7.525453854566524
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_age_hours",
+      "importance": 0.187932623356683
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_3h_value",
+      "importance": 0.6801470969099638
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_3h_coverage",
+      "importance": 0.2953592714024215
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_6h_value",
+      "importance": 1.6527573899715189
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_6h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_12h_value",
+      "importance": 1.5214431245180575
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_12h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_24h_value",
+      "importance": 2.2830147750483802
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_24h_coverage",
+      "importance": 0.054373552368190116
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_change_3h",
+      "importance": 3.188499181227249
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_3h",
+      "importance": 6.57098671738562
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_6h",
+      "importance": 2.8423561492395284
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_6h_count",
+      "importance": 0.027831169832164677
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_24h",
+      "importance": 1.6205598288191978
+    },
+    {
+      "component": "occurrence",
+      "feature": "t_error_24h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_latest",
+      "importance": 0.705406221474954
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_age_hours",
+      "importance": 0.30696506905673177
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_3h_value",
+      "importance": 0.2632220769544771
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_3h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_6h_value",
+      "importance": 0.9703236340171348
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_6h_coverage",
+      "importance": 6.043882411008958e-07
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_12h_value",
+      "importance": 1.8593971364213375
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_12h_coverage",
+      "importance": 0.013717097212935596
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_24h_value",
+      "importance": 1.6733761994532057
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_24h_coverage",
+      "importance": 0.01422747762277436
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_change_3h",
+      "importance": 0.6058786107805111
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_3h",
+      "importance": 2.188021655390966
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_6h",
+      "importance": 2.330227966331781
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_6h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_24h",
+      "importance": 1.8853249410682318
+    },
+    {
+      "component": "occurrence",
+      "feature": "h_error_24h_count",
+      "importance": 0.11037807470687082
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_latest",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_age_hours",
+      "importance": 0.49496659681575716
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_3h_value",
+      "importance": 0.18818488519575463
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_3h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_6h_value",
+      "importance": 0.925373296068004
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_6h_coverage",
+      "importance": 1.846402427951005e-05
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_12h_value",
+      "importance": 0.9189686330904023
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_12h_coverage",
+      "importance": 0.007960844579155142
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_24h_value",
+      "importance": 0.9014290010043966
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_24h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_3h",
+      "importance": 2.057869824050638
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_6h",
+      "importance": 2.744579766796899
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_6h_count",
+      "importance": 0.009712041461033894
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_24h",
+      "importance": 3.187505480826505
+    },
+    {
+      "component": "occurrence",
+      "feature": "rain_error_24h_count",
+      "importance": 0.010636577738352802
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_temperature_c",
+      "importance": 14.093006367054588
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_humidity_pct",
+      "importance": 7.627479532534032
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_rain_mm",
+      "importance": 12.60421540942621
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_sin",
+      "importance": 22.603140592102296
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_cos",
+      "importance": 5.209231068842239
+    },
+    {
+      "component": "positive_amount",
+      "feature": "forecast_day_band",
+      "importance": 12.844680875096646
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_latest",
+      "importance": 1.823386495622842
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_age_hours",
+      "importance": 0.19366514180253339
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_3h_value",
+      "importance": 0.057096612134234295
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_3h_coverage",
+      "importance": 0.14433240874703726
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_6h_value",
+      "importance": 0.1642175688528752
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_6h_coverage",
+      "importance": 0.000764197617519302
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_12h_value",
+      "importance": 0.36196208623055903
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_12h_coverage",
+      "importance": 0.000255465498425064
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_24h_value",
+      "importance": 0.29401465394118603
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_24h_coverage",
+      "importance": 0.004897551484003818
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_change_3h",
+      "importance": 0.29762875563761065
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_3h",
+      "importance": 2.318163151096474
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_6h",
+      "importance": 1.1565084584459446
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_6h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_24h",
+      "importance": 0.5031603915908055
+    },
+    {
+      "component": "positive_amount",
+      "feature": "t_error_24h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_latest",
+      "importance": 0.22328303829823354
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_age_hours",
+      "importance": 0.182403884972429
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_3h_value",
+      "importance": 0.08931253719335093
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_3h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_6h_value",
+      "importance": 0.34528460058554733
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_6h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_12h_value",
+      "importance": 0.09198642644409481
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_12h_coverage",
+      "importance": 0.024732840426137086
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_24h_value",
+      "importance": 2.8213132117388833
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_24h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_change_3h",
+      "importance": 0.19425878675079886
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_3h",
+      "importance": 2.471359842713997
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_6h",
+      "importance": 0.8107893464892377
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_6h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_24h",
+      "importance": 0.6735240795396569
+    },
+    {
+      "component": "positive_amount",
+      "feature": "h_error_24h_count",
+      "importance": 0.04328185089147934
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_latest",
+      "importance": 0.004425139167585081
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_age_hours",
+      "importance": 0.26644442966399345
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_3h_value",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_3h_coverage",
+      "importance": 0.0001163283791069264
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_6h_value",
+      "importance": 0.648089357618647
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_6h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_12h_value",
+      "importance": 0.5312914589543134
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_12h_coverage",
+      "importance": 0.0005277760895801332
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_24h_value",
+      "importance": 3.8532753104629593
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_24h_coverage",
+      "importance": 0.0005431545710865824
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_3h",
+      "importance": 0.7329247622981251
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_6h",
+      "importance": 2.8786546658116037
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_6h_count",
+      "importance": 0.00037466209676752205
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_24h",
+      "importance": 0.809995725084352
+    },
+    {
+      "component": "positive_amount",
+      "feature": "rain_error_24h_count",
+      "importance": 0.0
+    }
+  ]
+}

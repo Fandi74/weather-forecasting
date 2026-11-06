@@ -1,0 +1,48 @@
+{
+  "version": "engine_v2_catboost.1",
+  "purpose": "Separate local candidate; preserve the original V2 benchmark and do not push to GitHub",
+  "training_target_start_wib": "2025-11-03T00:00:00+07:00",
+  "validation_training_cutoff_wib": "2026-10-01T00:00:00+07:00",
+  "validation_issues_wib": [
+    "2026-10-06T00:00:00+07:00",
+    "2026-10-13T00:00:00+07:00",
+    "2026-10-20T00:00:00+07:00",
+    "2026-10-27T00:00:00+07:00"
+  ],
+  "final_training_cutoff_exclusive_wib": "2026-11-03T00:00:00+07:00",
+  "benchmark_start_wib": "2026-11-03T00:00:00+07:00",
+  "benchmark_end_exclusive_wib": "2026-11-10T00:00:00+07:00",
+  "forecast_source": "The same archived GFS seamless run initialized 2026-11-02T06:00:00+00:00 as original V2",
+  "publication_availability_assumption_hours": 6,
+  "actual_publication_timestamp_verified": false,
+  "variants": {
+    "catboost_base_full": "V2 annual fixed-day training pairs with earlier exact runs preferred; GFS temperature/humidity/rain, local-hour sine/cosine, forecast-day band",
+    "catboost_base_exact": "Same six predictors, exact archived weekly runs only; matched training-row control for history features",
+    "catboost_history_exact": "Exact same training rows as base_exact, adding issue-time station history, age, complete rain sums, coverage and errors from previously issued forecasts"
+  },
+  "feature_issue_policy": "History requires a known exact issue. Measurements, availability times and nominal target times must be at/before that issue. Historical receipt time is measurement plus one hour, inherited from V2. Prior forecast issues must precede the current issue. A week-long frozen forecast gets one initial context, never future actual updates.",
+  "station_history_policy": "Latest station values expire after six hours; age/coverage remain explicit. Trailing 3/6/12/24-hour summaries are anchored on the latest available hour. Rain sums require every constituent hour; no missing-to-zero fill. Recent errors use only previously issued exact weekly forecasts and then-available observations.",
+  "temperature_humidity": "CatBoost MAE regression of observation minus GFS; humidity clipped to 0–100",
+  "rain": "CatBoost Logloss occurrence plus RMSE positive-amount regression; expected rain = probability times nonnegative conditional amount (minimum 0.28 mm when wet)",
+  "hourly_rain_event": "measured interval rainfall >= 0.28 mm",
+  "minimum_training_rows": 168,
+  "minimum_validation_rows": 48,
+  "hyperparameters": {
+    "iterations": 400,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 10.0,
+    "random_seed": 2601106,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "has_time": true,
+    "bootstrap_type": "No"
+  },
+  "tuning": "One predeclared CatBoost configuration, no early stopping or hyperparameter search; October comparison selects component methods only",
+  "selection": "Per station and variable over all seven forecast days: smallest October MAE for temperature/humidity, RMSE for rain amount, Brier score for hourly probability; compare raw, original V2 validation recipe and all CatBoost variants. Ties favor the original V2. Rain amount and probability can select different variants and are not a full coherent joint distribution.",
+  "baseline_comparison": "Reconstruct original V2's selected recipes using only pre-October fits for October rows. Never evaluate October with the final V2 parameters trained through November 2. Original V2 recipe selection and CatBoost component selection both use October; all October scores are validation, not a new untouched test.",
+  "forecast_lead_limit": "Forecast-day bands are inherited from V2; annual proxy rows have unknown exact issue times. All exact weekly issues are midnight WIB. No improvement for arbitrary rolling issue times or spatial transfer is established.",
+  "joint_window_probability": "Unavailable for 6/12/24 hours; never add hourly probabilities",
+  "new_actuals": "Post-cutoff observations remain withheld; later scoring verifies hashes and never fits or changes models",
+  "station_policy": "Separate station models. X51/X67 without October support retain raw GFS and unavailable probability. X66 retains user-selected t/h and its sensor discrepancy flag."
+}

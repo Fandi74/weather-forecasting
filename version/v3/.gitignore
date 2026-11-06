@@ -1,0 +1,8 @@
+.venv/
+.tmp/
+.pip-cache/
+.mpl-cache/
+__pycache__/
+*.pyc
+catboost_info/
+output/scores_*/

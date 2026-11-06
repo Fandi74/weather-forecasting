@@ -1,0 +1,60 @@
+{
+  "variant": "catboost_base_exact",
+  "variable": "humidity",
+  "feature_names": [
+    "gfs_temperature_c",
+    "gfs_humidity_pct",
+    "gfs_rain_mm",
+    "local_hour_sin",
+    "local_hour_cos",
+    "forecast_day_band"
+  ],
+  "training_rows": 2723,
+  "parameters": {
+    "iterations": 400,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 10.0,
+    "random_seed": 2601106,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "has_time": true,
+    "bootstrap_type": "No",
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "kind": "residual",
+  "model": "models/validation/X66/catboost_base_exact/humidity/residual.cbm",
+  "feature_importance": [
+    {
+      "component": "residual",
+      "feature": "gfs_temperature_c",
+      "importance": 33.88989795760807
+    },
+    {
+      "component": "residual",
+      "feature": "gfs_humidity_pct",
+      "importance": 38.07224236573846
+    },
+    {
+      "component": "residual",
+      "feature": "gfs_rain_mm",
+      "importance": 4.778238116458656
+    },
+    {
+      "component": "residual",
+      "feature": "local_hour_sin",
+      "importance": 5.543417510028996
+    },
+    {
+      "component": "residual",
+      "feature": "local_hour_cos",
+      "importance": 16.344253510951287
+    },
+    {
+      "component": "residual",
+      "feature": "forecast_day_band",
+      "importance": 1.3719505392145515
+    }
+  ]
+}

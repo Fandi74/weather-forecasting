@@ -5,36 +5,74 @@ weather-station measurements to learn statistical and machine-learning correctio
 The product goal is hourly temperature/humidity and rain probability/amount for
 1-, 6-, 12- and 24-hour windows, with a seven-day extension where supported.
 
-## Versions
+## Engine versions
 
 | Folder | Status | Scope |
 | --- | --- | --- |
-| [versions/v2](versions/v2/README.md) | Frozen research baseline | GFS correction and blind 3–9 November 2026 benchmark |
+| [versions/v2](versions/v2/README.md) | Frozen original baseline | GFS correction and blind 3–9 November 2026 benchmark |
+| [version/v3](version/v3/README.md) | Frozen CatBoost candidate | Existing-input and station-history experiments; selected methods and all trained variants |
 
-Each engine version owns its source, dependencies, tests and experiment artifacts.
-New versions belong in separate folders under `versions/`; preserve earlier frozen
-models and predictions. Engine V1 and proposed future model experiments are not
-included in this initial import.
+Each version owns its source, dependencies, tests and experiment artifacts.
+Earlier locked models and predictions are preserved.
 
-## Engine V2
+## V2 and V3 prediction comparison
 
-V2 fits temperature/humidity median-error corrections and rain regression/classification
-models from earlier forecast–observation pairs. It selects candidates on October
-validation and freezes hourly predictions for four pilot locations. X51/X67 retain
-raw GFS fallback. November benchmark accuracy is pending withheld measurements.
+Both graphs show **3–9 November 2026**, with 168 hourly intervals for each of
+X50, X51, X66 and X67, in **WIB (UTC+7)**. They use the same archived GFS run
+initialized on 2 November at 06:00 UTC and matching axis ranges.
+**Actual measurements remain withheld; benchmark accuracy is pending.**
 
-Start with the [V2 instructions](versions/v2/README.md),
-[baseline report](versions/v2/output/engine_v2/benchmark_20261103/baseline_report.md),
+### Engine V2
+
+![Engine V2 — frozen hourly predictions, 3–9 November 2026](version/v3/graphs/V2_prediction_7days.png)
+
+### Engine V3 — CatBoost
+
+![Engine V3 — frozen hourly predictions, 3–9 November 2026](version/v3/graphs/V3_prediction_7days.png)
+
+V3 shows the selected forecast: **X50 rain amount retains V2**; X51/X67 retain
+raw GFS in both versions. X66 retains the user-selected t/h stream and its sensor
+discrepancy warning. Temperature/humidity are interval-end values; rain is the
+preceding hour's total. Hourly rain probability means at least 0.28 mm.
+
+## October validation
+
+These values were used to select methods; they are **not untouched final-test accuracy**.
+
+| X50 metric — lower is better | Original V2 | V3 selected method |
+| --- | ---: | ---: |
+| Temperature MAE, °C | 1.748 | 1.704 |
+| Humidity MAE, percentage points | 9.748 | 6.219 |
+| Rain probability Brier score | 0.1086 | 0.1047 |
+| Rain amount RMSE, mm/hour | 1.670 | 1.670 — V2 retained |
+
+The history-only experiment has a matched exact-run control. At the frozen issue,
+station readings are about nine hours old; expired latest/rolling features remain
+missing. The larger X66 improvements measure agreement with its flagged sensor
+stream. Joint 6/12/24-hour probabilities and 50 km spatial transfer remain unproven.
+
+Read the [V3 training report](version/v3/output/benchmark_20261103_catboost/training_report.md),
+[V2 baseline report](versions/v2/output/engine_v2/benchmark_20261103/baseline_report.md),
 and [confirmed product scope](docs/PROJECT.md).
+
+## Verify and run
+
+```sh
+# Verify both frozen snapshots and the comparison graphs; Python standard library only.
+python version/v3/verify_package.py
+```
+
+See [V2 instructions](versions/v2/README.md) and [V3 instructions](version/v3/README.md)
+for dependencies, tests and data requirements. V3's internal identifier remains
+`engine_v2_catboost.1` to preserve the original sealed experiment.
 
 ## Data and provenance
 
-The initial import includes trained models, frozen forecasts, annual derived GFS
-tables, quality/provenance reports, graphs and the sealed benchmark ZIP. Source
-and frozen experiment files are copied byte-for-byte from the research workspace.
-Raw station CSV exports, raw provider-response archives, local databases and
-build environments remain outside Git. See [data requirements](versions/v2/DATA.md).
-Some historical provenance records contain original local filesystem paths.
+The repository includes source, trained models, frozen forecasts, reports, plots,
+derived GFS history and sealed packages. Raw station exports, raw provider-response
+archives, local databases and runtime/download caches remain outside Git.
+Some original provenance records contain local filesystem paths and historical
+pre-publication notes. See [V2 data requirements](versions/v2/DATA.md).
 
 Open-Meteo weather-data attribution: https://open-meteo.com/ (CC BY 4.0).
 No software license has been selected for this repository.

@@ -1,0 +1,360 @@
+{
+  "variant": "catboost_history_exact",
+  "variable": "humidity",
+  "feature_names": [
+    "gfs_temperature_c",
+    "gfs_humidity_pct",
+    "gfs_rain_mm",
+    "local_hour_sin",
+    "local_hour_cos",
+    "forecast_day_band",
+    "t_latest",
+    "t_age_hours",
+    "t_3h_value",
+    "t_3h_coverage",
+    "t_6h_value",
+    "t_6h_coverage",
+    "t_12h_value",
+    "t_12h_coverage",
+    "t_24h_value",
+    "t_24h_coverage",
+    "t_change_3h",
+    "t_error_3h",
+    "t_error_3h_count",
+    "t_error_6h",
+    "t_error_6h_count",
+    "t_error_24h",
+    "t_error_24h_count",
+    "h_latest",
+    "h_age_hours",
+    "h_3h_value",
+    "h_3h_coverage",
+    "h_6h_value",
+    "h_6h_coverage",
+    "h_12h_value",
+    "h_12h_coverage",
+    "h_24h_value",
+    "h_24h_coverage",
+    "h_change_3h",
+    "h_error_3h",
+    "h_error_3h_count",
+    "h_error_6h",
+    "h_error_6h_count",
+    "h_error_24h",
+    "h_error_24h_count",
+    "rain_latest",
+    "rain_age_hours",
+    "rain_3h_value",
+    "rain_3h_coverage",
+    "rain_6h_value",
+    "rain_6h_coverage",
+    "rain_12h_value",
+    "rain_12h_coverage",
+    "rain_24h_value",
+    "rain_24h_coverage",
+    "rain_error_3h",
+    "rain_error_3h_count",
+    "rain_error_6h",
+    "rain_error_6h_count",
+    "rain_error_24h",
+    "rain_error_24h_count"
+  ],
+  "training_rows": 4229,
+  "parameters": {
+    "iterations": 400,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 10.0,
+    "random_seed": 2601106,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "has_time": true,
+    "bootstrap_type": "No",
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "kind": "residual",
+  "model": "models/validation/X50/catboost_history_exact/humidity/residual.cbm",
+  "feature_importance": [
+    {
+      "component": "residual",
+      "feature": "gfs_temperature_c",
+      "importance": 5.50782544547257
+    },
+    {
+      "component": "residual",
+      "feature": "gfs_humidity_pct",
+      "importance": 32.13515898008375
+    },
+    {
+      "component": "residual",
+      "feature": "gfs_rain_mm",
+      "importance": 0.12667647243296595
+    },
+    {
+      "component": "residual",
+      "feature": "local_hour_sin",
+      "importance": 19.023100899784176
+    },
+    {
+      "component": "residual",
+      "feature": "local_hour_cos",
+      "importance": 26.85353784034684
+    },
+    {
+      "component": "residual",
+      "feature": "forecast_day_band",
+      "importance": 0.6540189800882422
+    },
+    {
+      "component": "residual",
+      "feature": "t_latest",
+      "importance": 1.387496874689543
+    },
+    {
+      "component": "residual",
+      "feature": "t_age_hours",
+      "importance": 0.43261452476811385
+    },
+    {
+      "component": "residual",
+      "feature": "t_3h_value",
+      "importance": 0.9374985419124802
+    },
+    {
+      "component": "residual",
+      "feature": "t_3h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "residual",
+      "feature": "t_6h_value",
+      "importance": 0.6167009133644645
+    },
+    {
+      "component": "residual",
+      "feature": "t_6h_coverage",
+      "importance": 0.00012031218977238298
+    },
+    {
+      "component": "residual",
+      "feature": "t_12h_value",
+      "importance": 0.3168940999641655
+    },
+    {
+      "component": "residual",
+      "feature": "t_12h_coverage",
+      "importance": 1.8120264616828835e-05
+    },
+    {
+      "component": "residual",
+      "feature": "t_24h_value",
+      "importance": 0.2690650640410548
+    },
+    {
+      "component": "residual",
+      "feature": "t_24h_coverage",
+      "importance": 0.011716107925234226
+    },
+    {
+      "component": "residual",
+      "feature": "t_change_3h",
+      "importance": 0.4121891450676437
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_3h",
+      "importance": 0.38266323726459484
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_3h_count",
+      "importance": 0.2222009774585753
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_6h",
+      "importance": 0.89608270545466
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_6h_count",
+      "importance": 0.37325754918002507
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_24h",
+      "importance": 0.5861204699948592
+    },
+    {
+      "component": "residual",
+      "feature": "t_error_24h_count",
+      "importance": 0.8527911289446299
+    },
+    {
+      "component": "residual",
+      "feature": "h_latest",
+      "importance": 0.0
+    },
+    {
+      "component": "residual",
+      "feature": "h_age_hours",
+      "importance": 0.06770909617692232
+    },
+    {
+      "component": "residual",
+      "feature": "h_3h_value",
+      "importance": 0.10322669799051341
+    },
+    {
+      "component": "residual",
+      "feature": "h_3h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "residual",
+      "feature": "h_6h_value",
+      "importance": 0.2035556806537996
+    },
+    {
+      "component": "residual",
+      "feature": "h_6h_coverage",
+      "importance": 0.19275001354588803
+    },
+    {
+      "component": "residual",
+      "feature": "h_12h_value",
+      "importance": 0.2852743881798814
+    },
+    {
+      "component": "residual",
+      "feature": "h_12h_coverage",
+      "importance": 0.0
+    },
+    {
+      "component": "residual",
+      "feature": "h_24h_value",
+      "importance": 0.7124159240441855
+    },
+    {
+      "component": "residual",
+      "feature": "h_24h_coverage",
+      "importance": 0.1979297010934581
+    },
+    {
+      "component": "residual",
+      "feature": "h_change_3h",
+      "importance": 0.7901762430475833
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_3h",
+      "importance": 0.07768344475789801
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_3h_count",
+      "importance": 0.0527812613567977
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_6h",
+      "importance": 0.8168417184687131
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_6h_count",
+      "importance": 0.44159057334923335
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_24h",
+      "importance": 0.3297639315313039
+    },
+    {
+      "component": "residual",
+      "feature": "h_error_24h_count",
+      "importance": 0.006601478935766625
+    },
+    {
+      "component": "residual",
+      "feature": "rain_latest",
+      "importance": 0.08941423381486971
+    },
+    {
+      "component": "residual",
+      "feature": "rain_age_hours",
+      "importance": 1.9439410058527096e-05
+    },
+    {
+      "component": "residual",
+      "feature": "rain_3h_value",
+      "importance": 0.5302955289231389
+    },
+    {
+      "component": "residual",
+      "feature": "rain_3h_coverage",
+      "importance": 0.4131701182802086
+    },
+    {
+      "component": "residual",
+      "feature": "rain_6h_value",
+      "importance": 0.0900899930050579
+    },
+    {
+      "component": "residual",
+      "feature": "rain_6h_coverage",
+      "importance": 0.35314777401368014
+    },
+    {
+      "component": "residual",
+      "feature": "rain_12h_value",
+      "importance": 0.08653762242544484
+    },
+    {
+      "component": "residual",
+      "feature": "rain_12h_coverage",
+      "importance": 0.00015804085966565065
+    },
+    {
+      "component": "residual",
+      "feature": "rain_24h_value",
+      "importance": 0.4654615053192627
+    },
+    {
+      "component": "residual",
+      "feature": "rain_24h_coverage",
+      "importance": 0.13986778666183794
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_3h",
+      "importance": 0.1359170905731971
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_3h_count",
+      "importance": 0.0
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_6h",
+      "importance": 0.5273260262798171
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_6h_count",
+      "importance": 0.19115679491185916
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_24h",
+      "importance": 0.33465128045299203
+    },
+    {
+      "component": "residual",
+      "feature": "rain_error_24h_count",
+      "importance": 0.36673822124398797
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "frozen_rows": 672,
+  "original_v2_immutable_files": 34,
+  "saved_models_reproduced": 18,
+  "candidate_locked": true,
+  "sealed_at_utc": "2026-11-06T04:24:19.626749+00:00",
+  "candidate_lock_sha256": "1215c195446b23ca456008d1b887ca391750bb73ae2900677f1ddbe84db7ccfe",
+  "archive_sha256": "9225fac2a5c2ec8ccdf79694ff2502e8c7d3cce864566c5b75b34ee48e779c22",
+  "archive_bytes": 4221684,
+  "unit_tests_passed": 13,
+  "github_push_performed": false
+}

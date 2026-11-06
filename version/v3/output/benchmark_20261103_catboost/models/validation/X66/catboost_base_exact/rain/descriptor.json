@@ -1,0 +1,98 @@
+{
+  "variant": "catboost_base_exact",
+  "variable": "rain",
+  "feature_names": [
+    "gfs_temperature_c",
+    "gfs_humidity_pct",
+    "gfs_rain_mm",
+    "local_hour_sin",
+    "local_hour_cos",
+    "forecast_day_band"
+  ],
+  "training_rows": 2721,
+  "parameters": {
+    "iterations": 400,
+    "depth": 4,
+    "learning_rate": 0.04,
+    "l2_leaf_reg": 10.0,
+    "random_seed": 2601106,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "has_time": true,
+    "bootstrap_type": "No",
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "occurrence": {
+    "kind": "model",
+    "path": "models/validation/X66/catboost_base_exact/rain/occurrence.cbm"
+  },
+  "positive_amount": {
+    "kind": "model",
+    "path": "models/validation/X66/catboost_base_exact/rain/positive_amount.cbm"
+  },
+  "kind": "hurdle",
+  "wet_training_rows": 32,
+  "feature_importance": [
+    {
+      "component": "occurrence",
+      "feature": "gfs_temperature_c",
+      "importance": 14.172923595998586
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_humidity_pct",
+      "importance": 25.15427170910826
+    },
+    {
+      "component": "occurrence",
+      "feature": "gfs_rain_mm",
+      "importance": 22.30106221713999
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_sin",
+      "importance": 12.190410238903135
+    },
+    {
+      "component": "occurrence",
+      "feature": "local_hour_cos",
+      "importance": 11.99232258505083
+    },
+    {
+      "component": "occurrence",
+      "feature": "forecast_day_band",
+      "importance": 14.189009653799184
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_temperature_c",
+      "importance": 41.2765955187496
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_humidity_pct",
+      "importance": 10.809038728840537
+    },
+    {
+      "component": "positive_amount",
+      "feature": "gfs_rain_mm",
+      "importance": 16.289186797440422
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_sin",
+      "importance": 13.11885391869749
+    },
+    {
+      "component": "positive_amount",
+      "feature": "local_hour_cos",
+      "importance": 11.28826912970117
+    },
+    {
+      "component": "positive_amount",
+      "feature": "forecast_day_band",
+      "importance": 7.218055906570787
+    }
+  ]
+}
