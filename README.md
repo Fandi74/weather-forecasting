@@ -1,261 +1,116 @@
-# Weather forecasting
+# Hybrid Weather Forecasting Model v0.1
 
-Research monorepo for local forecasts using Open-Meteo forecasts and physical
-weather-station measurements to learn statistical and machine-learning corrections.
-The product goal is hourly temperature/humidity and rain probability/amount for
-1-, 6-, 12- and 24-hour windows, with a seven-day extension where supported.
+A public, de-identified hybrid forecasting model. It combines numerical weather
+forecasts with statistical corrections, a humidity ensemble, and direct
+rain-window learners. It uses anonymous **Site A–D** labels and portable paths.
 
-## Engine versions
+The release files exclude project-specific organization names, original telemetry labels,
+device identifiers, precise coordinates, private network addresses, personal
+paths and identifying historical archives. The numerical models are retained
+after metadata cleaning and feature-label replacement.
 
-Use the `main` branch. Each engine version has its own top-level folder;
-version-specific branches and a shared `version/` parent are not used.
+## Percentage accuracy with explicit definitions
+
+The point results below use **84 paired observations at Site A** from a
+retrospective diagnostic that had already been inspected. These are
+within-tolerance rates, not a universal model-accuracy percentage.
+
+| Task | Definition | Result | Count |
+| --- | --- | ---: | ---: |
+| Temperature | Absolute error <= 1 degree C | **66.7%** | 56 / 84 |
+| Humidity | Absolute error <= 5 humidity percentage points | **72.6%** | 61 / 84 |
+| Baseline humidity | Same 5-point tolerance | 48.8% | 41 / 84 |
+
+Humidity MAE is **4.111 percentage points**, compared with **8.982** for the
+statistical baseline: **54.2% lower MAE**. That number is an error reduction,
+not an accuracy percentage. Temperature MAE is **0.957 degrees C**.
+
+![Explicit percentage metrics](v0.1/graphs/percentage_accuracy.png)
+
+### Rainfall development evidence
+
+Rain-event scores come from an **earlier chronological rolling-fit development
+experiment**, not a new benchmark of the exported final weights. Event threshold:
+window rain >= 0.28 mm. Classification threshold: probability >= 0.5.
+
+| One-hour group | Balanced accuracy | Ordinary accuracy | All-dry accuracy | Wet / dry cases |
+| --- | ---: | ---: | ---: | ---: |
+| Site A | **57.5%** | 83.7% | 84.9% | 50 / 282 |
+| Site B | **58.4%** | 75.7% | 76.1% | 72 / 229 |
+
+Ordinary accuracy is dominated by dry cases and is below the all-dry baseline
+here. Rainfall amount has not consistently improved over raw weather forecasts.
+All 1/6/12/24-hour groups, confusion counts, Brier scores and amount RMSE are in
+[the rainfall score table](v0.1/results/rainfall_development_scores.csv).
+There is **no single overall accuracy percentage** for temperature, humidity
+and rainfall together. Read [metric definitions and scope](v0.1/docs/METRICS.md).
+
+## Forecasts and comparison graphs
+
+![Anonymous forecast comparison](v0.1/graphs/forecast_comparison.png)
+
+- [Observations versus predictions](v0.1/graphs/observations_vs_predictions.png)
+- [Seven-day point forecasts](v0.1/graphs/seven_day_forecast.png)
+- [Rainfall development comparison](v0.1/graphs/rainfall_development_comparison.png)
+
+Axes use relative forecast hours and anonymous labels. The demonstrations are
+historical replays, not current live forecasts.
+
+## What is included
+
+| Output | Coverage |
+| --- | --- |
+| Temperature | Statistical baseline at all configured sites |
+| Humidity | Baseline/CatBoost/LightGBM ensemble at Site A; retained fallback elsewhere |
+| Rain amount and event probability | Selected direct 1/6/12/24-hour routes at Sites A/B |
+| Other-site rain | Baseline fallback; unsupported multi-hour probabilities are null |
+
+The package contains cleaned trained models, standalone inference code,
+anonymous demonstration inputs/outputs, reproducible metric data, graphs,
+tests and a package manifest. It needs no old version archive.
 
 ```text
-weather-forecasting/
-├── v2/
-├── v3/
-├── v4/
-├── v5/
-├── v6/
-├── v7/
-├── results/
-└── docs/
+v0.1/
+  engine.py              model inference and composition
+  models/                cleaned numerical model files
+  data/                  anonymous examples and evaluation pairs
+  results/               defined metrics and comparison tables
+  graphs/                anonymous plots
+  docs/                  usage, methods, limits and privacy scope
+  tests/                 inference, scoring and privacy checks
 ```
-
-| Folder | Status | Scope |
-| --- | --- | --- |
-| [v2](v2/README.md) | Frozen original baseline | GFS correction and blind 3–9 November 2026 benchmark |
-| [v3](v3/README.md) | Frozen CatBoost candidate | Existing-input and station-history experiments; selected methods and all trained variants |
-| [v4](v4/README.md) | Frozen LightGBM candidate | Same V2 data and V3 feature design; independently trained LightGBM variants |
-| [v5](v5/README.md) | Frozen humidity candidate | X66 hsht ensemble; exact V2 temperature, rain amount and rain probability |
-| [v6](v6/README.md) | Experimental rainfall candidate | X50/X66 rain and soil history; initial, weekly and E11-corrected models; V5 temperature/humidity retained |
-| [v7](v7/README.md) | Combined V5/V6 candidate | V5 humidity + corrected V6 rainfall; V2 temperature retained, with documented limits and exact component checks |
-
-Each version owns its source, dependencies, tests and experiment artifacts.
-Earlier locked models and predictions are preserved.
-
-## V7: V5 humidity + V6 rainfall
-
-V7 combines the existing V5 humidity component with corrected V6 rainfall,
-while keeping V2 temperature exactly. It reuses the trained components without
-new fitting or model selection. **This merge does not establish a new accuracy
-gain; V6 rainfall remains experimental.**
-
-| Component | Coverage |
-| --- | --- |
-| V5 humidity ensemble | X66; other stations retain their V5/V2 fallback |
-| Corrected V6 rainfall | X50/X66, with the original selected model/control routes |
-| Temperature | All existing V5 values, inherited from V2 |
-| Other station rain | Existing X51/X67 amounts; multi-hour probabilities are null |
-
-The included retrospective 3 November issue has **672 unchanged hourly
-temperature/humidity points** and **16 combined 1/6/12/24-hour forecasts**.
-Temperature/humidity are values at each window end. Rain is a whole-window total,
-not a guessed hourly distribution; the rain windows cover the initial 24 hours.
-
-![V7 combines V5 humidity and V6 rainfall](v7/output/merged_candidate_20261106/V7_merged_forecasts.png)
-
-**Limits:** no new combined accuracy benchmark; November observations were
-already revealed; rainfall amount has not consistently beaten raw GFS; station
-coverage is limited; +1h reading availability is assumed; SRM wetting can also
-be manual fertigation. Overlapping rain windows are not additive and do not
-establish a coherent joint predictive distribution. V7 has no automatic live
-forecast pipeline.
-
-Read the [V7 overview](v7/README.md), [usage and input/output guide](v7/docs/USAGE.md),
-[architecture and selected routes](v7/docs/ARCHITECTURE.md),
-[full limitations](v7/docs/LIMITATIONS.md), and
-[validation evidence](v7/docs/VALIDATION.md).
-Models, results, graph, tests, frozen source/audits and a publication verifier
-are included. Eleven integration tests pass; component replay matches and all
-535 earlier frozen files remain unchanged.
-
-## V6 rainfall research — X50 and X66
-
-**V6 remains experimental: rainfall amount is not consistently more accurate than
-raw GFS.** It uses the 6 August–6 November station exports to study rain, `sm` and
-`srm`, and learns 1/6/12/24-hour rain occurrence and amount using fixed LightGBM
-designs. Nearby recent rain helps occurrence prediction more consistently than
-adding soil signals. Temperature and humidity retain all 672 V5 values exactly.
-
-| Later-period development comparison | Amount RMSE lower than raw GFS | Nearby-rain Brier lower than weather-only learner |
-| --- | ---: | ---: |
-| Initial fixed fit | 1/8 groups | 8/8 groups |
-| Weekly refresh | 0/8 groups | 8/8 groups |
-| E11-corrected, assumed +1h availability | 0/8 groups | 8/8 groups |
-| E11-corrected, assumed CSV-time availability | 1/8 groups | 8/8 groups |
-
-Groups are two stations × four forecast windows, not independent storms. The
-same 2,314 later-period windows are scored. Follow-ups were explored after seeing
-earlier results, so these are development comparisons, not untouched blind tests.
-
-E11 is treated as the user-described threshold flag: available positive raw
-`srm` is retained, missing `sm` stays missing, and no 7000 cutoff is imposed.
-After correction, SRM declines within an hour of 53/65 eligible X50 rain onsets
-and 33/41 at X66. It also falls without recorded rain, so soil changes alone
-cannot identify rain versus manual fertigation or supply rainfall millimetres.
-
-![Rain and mirrored SRM examples](v6/output/review_20261106/wetting_examples.png)
-
-The CSV contains assigned timestamps, without a separate arrival field. The
-earlier +1h availability delay was an assumption. Both timing cases below exclude
-future timestamps; CSV-time availability is a sensitivity, not confirmed live
-delivery behavior. Lower Brier scores indicate better rain probabilities.
-
-![V6 E11 and timestamp comparison](v6/output/e11_corrected_20261106/rain_probability_e11_timing.png)
-
-See [V6 instructions and findings](v6/README.md),
-[three-month rain/soil overview](v6/output/rainfall_candidate_20261106/rain_soil_patterns_3months.png),
-[corrected experiment report](v6/output/e11_corrected_20261106/report.md),
-[corrected final rainfall models](v6/output/e11_corrected_20261106/raw_srm_1h/models/final/),
-[stronger-control comparison](v6/output/review_20261106/review.md),
-and [publication manifest](v6/publication.json).
-
-## V5 humidity improvement — X66
-
-V5 combines **V2 humidity**, a **V3-style CatBoost humidity learner retrained on
-hsht**, and a **V4-style LightGBM humidity learner retrained on hsht**, with one
-third weight each. October development validation selected this combination:
-MAE improved from **7.282 to 6.739 percentage points** over 326 later-October cases.
-Final tree learners use 3,507 pre-cutoff examples. No November labels enter fitting
-or combination selection.
-
-For the previously revealed 3–6 November observations (84 matched hours):
-
-| Version | Humidity MAE, pp | Humidity RMSE, pp |
-| --- | ---: | ---: |
-| V2 | 8.98 | 11.85 |
-| V3 | 9.88 | 10.76 |
-| V4 | 12.04 | 13.40 |
-| **V5** | **4.11** | **5.90** |
-
-The new CatBoost hsht component alone scored 3.31 pp MAE on that November sample.
-V5 retains the combination selected using October. November is a development
-diagnostic because these observations were already revealed; later unseen data
-must confirm the gain. The humidity update applies to X66; other stations retain V2.
-
-**All 672 V5 temperature, rainfall amount and rain-probability values are exactly
-V2.** The separate V6 rainfall experiments are described above.
-
-![X66 humidity observations versus V2 through V5](v5/output/evaluation_20261106/X66_humidity_actual_V2_V3_V4_V5.png)
-
-See the [V5 source and instructions](v5/README.md),
-[trained humidity models](v5/output/benchmark_20261103_humidity_v5/models/final/),
-[selected combination](v5/output/benchmark_20261103_humidity_v5/selection.json),
-[training report](v5/output/benchmark_20261103_humidity_v5/training_report.md),
-and [November comparison](v5/output/evaluation_20261106/report.md).
-
-## X66 observed comparison: 3–6 November 2026
-
-**V2 has the lowest temperature MAE and humidity MAE for this partial period.**
-V3 has the lowest humidity RMSE and follows humidity changes more closely.
-V2 and V4 tie for rain amount/probability because V4 retained those V2 components.
-
-The reference is **temperature = (t + tsht) / 2** and **humidity = hsht**.
-There are **84 matched hourly temperature/humidity targets** and **83 complete
-rain hours**, ending 6 November at 12:00 WIB. Lower errors are better.
-
-| Model | Temperature MAE, °C | Humidity MAE, pp | Humidity RMSE, pp | Rain RMSE, mm/hour |
-| --- | ---: | ---: | ---: | ---: |
-| V2 | **0.96** | **8.98** | 11.85 | **0.059** |
-| V3 — CatBoost | 3.33 | 9.88 | **10.76** | 0.209 |
-| V4 — LightGBM | 4.27 | 12.04 | 13.40 | **0.059** |
-
-Matched rain totals: **0.56 mm measured**, **2.41 mm V2/V4**, **5.87 mm V3**.
-Only two wet hours were observed; all versions missed those hours under the
-0.28 mm/hour forecast-amount threshold. These rain scores are dominated by dry hours.
-
-The two temperature sensors differ by **7.37°C on average**. The frozen models
-were trained against the earlier t/h stream; these results use the newly requested
-average/hsht reference. This is a reference-specific comparison over a partial
-week, not a universal model ranking. No model was refitted.
-
-![X66 observations versus frozen V2, V3 and V4](results/x66/20261106/X66_overlay_actual_V2_V3_V4.png)
-
-Read the [full X66 analysis](results/x66/20261106/README.md),
-[error and accumulated-rain graph](results/x66/20261106/X66_errors_and_rain_cumulative.png),
-and [matched observations and forecasts](results/x66/20261106/hourly_comparison.csv).
-
-## V2, V3 and V4 prediction comparison
-
-All three graphs show **3–9 November 2026**, with 168 hourly intervals for each of
-X50, X51, X66 and X67, in **WIB (UTC+7)**. They use the same archived GFS run
-initialized on 2 November at 06:00 UTC and matching axis ranges.
-**These forecasts were frozen with November measurements withheld.**
-
-### Engine V2
-
-![Engine V2 — frozen hourly predictions, 3–9 November 2026](v4/output/benchmark_20261103_lightgbm/graphs/V2_prediction_7days.png)
-
-### Engine V3 — CatBoost
-
-![Engine V3 — frozen hourly predictions, 3–9 November 2026](v4/output/benchmark_20261103_lightgbm/graphs/V3_prediction_7days.png)
-
-### Engine V4 — LightGBM
-
-![Engine V4 — frozen hourly predictions, 3–9 November 2026](v4/output/benchmark_20261103_lightgbm/graphs/V4_prediction_7days.png)
-
-V3 retains V2 for **X50 rain amount**. V4 retains V2 for **X50/X66 rain amounts**
-and **X66 rain probability**. X51/X67 retain raw GFS in all versions. X66 retains the user-selected t/h stream and its sensor
-discrepancy warning. Temperature/humidity are interval-end values; rain is the
-preceding hour's total. Hourly rain probability means at least 0.28 mm.
-
-## October validation
-
-These values were used to select methods; they are **not untouched final-test accuracy**.
-
-| X50 metric — lower is better | Original V2 | V3 selected method | V4 selected method |
-| --- | ---: | ---: | ---: |
-| Temperature MAE, °C | 1.748 | 1.704 | 1.696 |
-| Humidity MAE, percentage points | 9.748 | 6.219 | 6.831 |
-| Rain probability Brier score | 0.1086 | 0.1047 | 0.1056 |
-| Rain amount RMSE, mm/hour | 1.670 | 1.670 — V2 retained | 1.670 — V2 retained |
-
-V4 uses V2’s archived observations/forecasts and V3’s feature/evaluation design.
-It learns independently; CatBoost predictions and weights are not training inputs.
-V3/V4 training-row signatures and frozen feature values match exactly.
-
-The history-only experiment has a matched exact-run control. At the frozen issue,
-station readings are about nine hours old; expired latest/rolling features remain
-missing. The larger X66 improvements measure agreement with its flagged sensor
-stream. Joint 6/12/24-hour probabilities and 50 km spatial transfer remain unproven.
-
-Read the [V4 training report](v4/output/benchmark_20261103_lightgbm/training_report.md),
-[V4 validation graph](v4/output/benchmark_20261103_lightgbm/validation.png),
-[V3 training report](v3/output/benchmark_20261103_catboost/training_report.md),
-[V2 baseline report](v2/output/engine_v2/benchmark_20261103/baseline_report.md),
-and [confirmed product scope](docs/PROJECT.md).
 
 ## Verify and run
 
+Use Python 3.12 from the repository root:
+
 ```sh
-# Verify all three frozen snapshots and comparison graphs; Python standard library only.
-python v4/verify_package.py
-# Verify V5 trained models, unchanged V2 components and humidity results.
-python v5/verify_package.py
-# Verify V6 models, rainfall metrics and preserved V5 temperature/humidity.
-python v6/verify_package.py
-# Verify V7 composition, copied models and inherited values.
-python v7/verify_package.py
-# Verify the published X66 observations and comparison metrics.
-python results/x66/20261106/verify_results.py
+# Standard library only: check hashes, structural patterns and metric arithmetic.
+python v0.1/verify_package.py
+# Install in your selected Python environment.
+python -m pip install -r v0.1/requirements.txt
+python -m unittest discover -s v0.1/tests -v
+python v0.1/run.py replay
+# Regenerate the figures from the anonymous files.
+python v0.1/plot_results.py
 ```
 
-See [V2 instructions](v2/README.md), [V3 instructions](v3/README.md)
-and [V4 instructions](v4/README.md)
-for dependencies, tests and data requirements. V3's internal identifier remains
-`engine_v2_catboost.1` to preserve the original sealed experiment.
+See [usage](v0.1/docs/USAGE.md), [methods](v0.1/docs/METHODS.md),
+[limitations](v0.1/docs/LIMITATIONS.md), and [privacy scope](v0.1/docs/PRIVACY.md).
 
-## Data and provenance
+## Limits and privacy scope
 
-The repository includes source, trained models, frozen forecasts, reports, plots,
-derived GFS history and sealed packages. Raw station exports, raw provider-response
-archives, local databases and runtime/download caches remain outside Git.
-The import manifests and frozen source are historical records and retain their
-original paths. Current entry points are separate `v2/` through `v7/` folders; the
-[layout migration record](LAYOUT_MIGRATION.json) records the folder correction.
-Some original provenance records contain local filesystem paths and historical
-pre-publication notes. See [V2 data requirements](v2/DATA.md).
+This is a content-cleaning release on a separate branch. **Existing branches
+and Git history are unchanged** and may still contain earlier identifiers.
+The GitHub account and commit metadata are outside the file-content cleaning
+scope. De-identification is not a guarantee that published numerical data cannot
+be matched with previously public data.
 
-Open-Meteo weather-data attribution: https://open-meteo.com/ (CC BY 4.0).
+The model has no new blind accuracy benchmark or automatic live data pipeline.
+Support is site-specific, rainfall remains experimental, and observation
+availability retains an assumed one-hour delay. Separate rain windows overlap
+and do not establish a coherent joint distribution. Soil wetting can be rain
+or manual irrigation/fertigation. Full limitations are retained in the docs.
+
+Weather-data attribution: [Open-Meteo](https://open-meteo.com/) (CC BY 4.0).
 No software license has been selected for this repository.

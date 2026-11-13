@@ -1,0 +1,38 @@
+{
+  "Site B": {
+    "1": {
+      "amount_method": "local_rain_soil",
+      "probability_method": "local_rain_soil"
+    },
+    "6": {
+      "amount_method": "local_rain_soil",
+      "probability_method": "weather_logistic"
+    },
+    "12": {
+      "amount_method": "local_rain_soil",
+      "probability_method": "training_climatology"
+    },
+    "24": {
+      "amount_method": "local_rain_soil",
+      "probability_method": "training_climatology"
+    }
+  },
+  "Site A": {
+    "1": {
+      "amount_method": "local_rain",
+      "probability_method": "network_rain_soil"
+    },
+    "6": {
+      "amount_method": "baseline",
+      "probability_method": "weather_logistic"
+    },
+    "12": {
+      "amount_method": "baseline",
+      "probability_method": "weather_logistic"
+    },
+    "24": {
+      "amount_method": "baseline",
+      "probability_method": "weather_logistic"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+  "gfs_temperature_c",
+  "gfs_humidity_pct",
+  "gfs_rain_mm",
+  "hour_sin",
+  "hour_cos",
+  "forecast_day",
+  "sensor_humidity_latest",
+  "sensor_humidity_age_hours",
+  "sensor_humidity_3h_mean",
+  "sensor_humidity_3h_coverage",
+  "sensor_humidity_6h_mean",
+  "sensor_humidity_6h_coverage",
+  "sensor_humidity_12h_mean",
+  "sensor_humidity_12h_coverage",
+  "sensor_humidity_24h_mean",
+  "sensor_humidity_24h_coverage",
+  "sensor_humidity_change_3h",
+  "sensor_humidity_error_24h",
+  "sensor_humidity_error_24h_count"
+]

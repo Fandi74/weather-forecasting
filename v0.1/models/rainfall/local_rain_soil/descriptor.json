@@ -1,0 +1,33 @@
+{
+  "family": "local_rain_soil",
+  "feature_names": [
+    "site_a_flag",
+    "window_hours",
+    "gfs_age_hours",
+    "gfs_rain_sum",
+    "gfs_rain_max",
+    "gfs_wet_hours",
+    "gfs_temperature_mean",
+    "gfs_humidity_mean",
+    "gfs_humidity_min",
+    "hour_sin",
+    "hour_cos",
+    "own_rain_latest_mm",
+    "own_rain_age_hours",
+    "own_rain_3h_mm",
+    "own_rain_3h_coverage",
+    "own_rain_6h_mm",
+    "own_rain_6h_coverage",
+    "own_last_wet_age_hours",
+    "own_soil_raw_latest",
+    "own_soil_moisture_latest",
+    "own_soil_age_hours",
+    "own_soil_raw_drop_30m_pct",
+    "own_soil_raw_drop_60m_pct",
+    "own_soil_raw_drop_180m_pct",
+    "own_soil_raw_range_180m_pct",
+    "own_soil_moisture_change_60m"
+  ],
+  "occurrence": "occurrence.txt",
+  "positive_amount": "positive_amount.txt"
+}

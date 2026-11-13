@@ -1,0 +1,20 @@
+{
+  "version": "0.1",
+  "tests_passed": 12,
+  "direct_identifier_findings": 0,
+  "graphs_visually_reviewed": 5,
+  "numerically_equivalent_point_forecasts": 672,
+  "numerically_equivalent_rain_windows": 8,
+  "combined_window_forecasts": 16,
+  "inference_comparison_tolerance": 1e-11,
+  "catboost_native_comparison_cases": 168,
+  "catboost_native_max_abs_difference": 1.4210854715202004e-14,
+  "lightgbm_models_compared": 7,
+  "lightgbm_native_max_abs_difference": 0.0,
+  "point_metric_pairs_independently_checked": 84,
+  "rain_development_cases_independently_checked": 2314,
+  "metric_definitions_explicit": true,
+  "new_blind_accuracy_claim": false,
+  "private_archives_included": false,
+  "existing_branches_and_history_purged": false
+}

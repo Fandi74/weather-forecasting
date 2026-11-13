@@ -1,0 +1,13 @@
+[
+  "site_a_flag",
+  "window_hours",
+  "gfs_age_hours",
+  "gfs_rain_sum",
+  "gfs_rain_max",
+  "gfs_wet_hours",
+  "gfs_temperature_mean",
+  "gfs_humidity_mean",
+  "gfs_humidity_min",
+  "hour_sin",
+  "hour_cos"
+]

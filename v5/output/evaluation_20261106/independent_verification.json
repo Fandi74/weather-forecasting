@@ -1,8 +1,0 @@
-{
-  "independent_numpy_metric_checks": 6,
-  "old_three_scores_match_previous_evaluation": true,
-  "temperature_rain_probability_rows_bitwise_equal_to_v2": 672,
-  "selected_blend_reproduced_for_X66": 168,
-  "chronological_validation_scores_recomputed": true,
-  "v5_humidity_mae_improvement_percent": 54.234633613103746
-}
