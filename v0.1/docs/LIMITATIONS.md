@@ -49,7 +49,6 @@ company system.
 10. **No live service or retraining workflow.** This package provides inference,
     historical examples, metrics and plots. It does not collect new weather,
     ingest raw device packets, schedule forecasts or retrain automatically.
-11. **De-identification scope.** Files in this release use anonymous labels and
-    cleaned model metadata. Historical commits, other refs and GitHub account/commit
-    metadata are not purged. Numeric data may be linkable to earlier public
-    data; this is not a formal anonymity or differential-privacy guarantee.
+11. **De-identification.** Files in this release use anonymous labels and
+    cleaned model metadata. These measures do not provide a formal anonymity
+    or differential-privacy guarantee.

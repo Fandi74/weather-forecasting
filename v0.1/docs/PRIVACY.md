@@ -24,14 +24,8 @@ publish source-location or identifier-mapping records.
 
 ## Boundaries
 
-Content cleaning applies to this release snapshot. Historical commits and
-other refs may expose earlier identifiers. GitHub account and commit metadata
-remain visible. Publishing or merging this snapshot is not a repository-wide
-history purge.
-
-Retained numerical models/examples can potentially be matched to previously
-public data. Generic labels remove direct names; they do not provide a formal
-anonymity or differential-privacy guarantee.
+Generic labels and cleaned metadata remove direct identifiers. These measures
+do not provide a formal anonymity or differential-privacy guarantee.
 
 The structural scanner checks broad identifier/address/path patterns.
 A separate publication review checks known source identifiers and all graph

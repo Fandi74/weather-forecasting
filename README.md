@@ -121,11 +121,7 @@ See [usage](v0.1/docs/USAGE.md), [methods](v0.1/docs/METHODS.md),
 
 ## Limits and privacy scope
 
-This is a content-cleaning release snapshot. **Historical Git commits and
-other refs are outside its cleaning scope** and may contain earlier identifiers.
-The GitHub account and commit metadata are outside the file-content cleaning
-scope. De-identification is not a guarantee that published numerical data cannot
-be matched with previously public data.
+The public package uses anonymous site labels and cleaned model metadata.
 
 The model has no new blind accuracy benchmark or automatic live data pipeline.
 Support is site-specific, rainfall remains experimental, and observation
