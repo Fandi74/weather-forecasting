@@ -1,5 +1,23 @@
 # Limitations
 
+## Public base-model scope
+
+This package is a limited base model derived from research conducted by its
+author while working at a company. The company owns the research and project
+intellectual property; its identity is withheld. The public package contains
+a subset of the full company system's features. See [ownership and license
+scope](../../NOTICE.md).
+
+**Air pressure, light intensity (lux), and UV index are not model inputs in
+this release.** Its accuracy is limited, and its reduced feature set may
+produce less accurate forecasts than the full system. Additional inputs do
+not automatically guarantee higher accuracy. No direct full-system comparison
+is included, and no numerical accuracy gap has been established. Public
+evaluation percentages must not be presented as measurements of the full
+company system.
+
+## Evaluation and operational limits
+
 1. **No new blind benchmark.** The point observations had already been inspected;
    rainfall percentages are earlier rolling-fit development evidence. The
    exported final model has no new combined accuracy result.
@@ -31,7 +49,7 @@
 10. **No live service or retraining workflow.** This package provides inference,
     historical examples, metrics and plots. It does not collect new weather,
     ingest raw device packets, schedule forecasts or retrain automatically.
-11. **De-identification scope.** Files on this branch use anonymous labels and
-    cleaned model metadata. Existing branches/history and GitHub account/commit
+11. **De-identification scope.** Files in this release use anonymous labels and
+    cleaned model metadata. Historical commits, other refs and GitHub account/commit
     metadata are not purged. Numeric data may be linkable to earlier public
     data; this is not a formal anonymity or differential-privacy guarantee.

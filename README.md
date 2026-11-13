@@ -1,6 +1,6 @@
 # Hybrid Weather Forecasting Model v0.1
 
-A public, de-identified hybrid forecasting model. It combines numerical weather
+A public, de-identified hybrid forecasting **base model**. It combines numerical weather
 forecasts with statistical corrections, a humidity ensemble, and direct
 rain-window learners. It uses anonymous **Site A–D** labels and portable paths.
 
@@ -8,6 +8,27 @@ The release files exclude project-specific organization names, original telemetr
 device identifiers, precise coordinates, private network addresses, personal
 paths and identifying historical archives. The numerical models are retained
 after metadata cleaning and feature-label replacement.
+
+## Research origin and base-model scope
+
+This base model is derived from research carried out by its author while
+working at a company. **The company owns the underlying research and project
+intellectual property.** Its identity is intentionally withheld in this public
+release.
+
+The public package provides a limited implementation with fewer features than
+the full company system. It **does not use air pressure, light intensity
+(lux), or UV index** as model inputs. Its forecasting accuracy is limited,
+and the reduced feature set may make it less accurate than the full system.
+No direct comparison with the full system is published, so no measured
+accuracy gap is claimed. The graphs and percentages below apply only to this
+public model under their stated evaluation conditions.
+
+The public release is available under the [MIT license](LICENSE). The company
+retains copyright ownership; MIT permits reuse of the released material,
+including commercial use, subject to its notice requirements. Unreleased
+company features and materials are outside this release. See the
+[research, ownership and license notice](NOTICE.md).
 
 ## Percentage accuracy with explicit definitions
 
@@ -100,8 +121,8 @@ See [usage](v0.1/docs/USAGE.md), [methods](v0.1/docs/METHODS.md),
 
 ## Limits and privacy scope
 
-This is a content-cleaning release on a separate branch. **Existing branches
-and Git history are unchanged** and may still contain earlier identifiers.
+This is a content-cleaning release snapshot. **Historical Git commits and
+other refs are outside its cleaning scope** and may contain earlier identifiers.
 The GitHub account and commit metadata are outside the file-content cleaning
 scope. De-identification is not a guarantee that published numerical data cannot
 be matched with previously public data.
@@ -112,5 +133,11 @@ availability retains an assumed one-hour delay. Separate rain windows overlap
 and do not establish a coherent joint distribution. Soil wetting can be rain
 or manual irrigation/fertigation. Full limitations are retained in the docs.
 
+## License and ownership
+
+The project-owned public release is licensed under [MIT](LICENSE).
+Copyright (c) 2026 The company copyright holder. Company ownership and the
+scope of the public base-model release are explained in [NOTICE.md](NOTICE.md).
+Third-party data and dependencies retain their upstream terms.
+
 Weather-data attribution: [Open-Meteo](https://open-meteo.com/) (CC BY 4.0).
-No software license has been selected for this repository.

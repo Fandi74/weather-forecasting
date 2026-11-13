@@ -1,8 +1,13 @@
 # File-content de-identification
 
-This branch contains only the public v0.1 package. Identifying old archives,
+This release snapshot contains only the public v0.1 package. Identifying old archives,
 configuration snapshots, raw device exports, original provenance records and
 opaque binary model metadata are excluded.
+
+The research was conducted by the author while working at a company, which
+owns the underlying research and project intellectual property. The company
+is intentionally unnamed. This general provenance statement does not identify
+the company or its sites. See [ownership and license scope](../../NOTICE.md).
 
 The release uses generic site aliases, relative forecast hours, generic feature
 names and portable paths. It excludes project-specific organization names, original
@@ -19,9 +24,10 @@ publish source-location or identifier-mapping records.
 
 ## Boundaries
 
-This is a separate branch. Other branches and Git history remain unchanged,
-and may expose earlier identifiers. GitHub account and commit metadata remain
-visible. Changing this branch is not a repository-wide history purge.
+Content cleaning applies to this release snapshot. Historical commits and
+other refs may expose earlier identifiers. GitHub account and commit metadata
+remain visible. Publishing or merging this snapshot is not a repository-wide
+history purge.
 
 Retained numerical models/examples can potentially be matched to previously
 public data. Generic labels remove direct names; they do not provide a formal
