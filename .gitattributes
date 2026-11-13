@@ -1,4 +1,0 @@
-# Preserve original bytes: benchmark_lock.json hashes source and CSV files too.
-* -text
-*.png binary
-*.zip binary

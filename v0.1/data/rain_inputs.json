@@ -1,0 +1,1004 @@
+[
+  {
+    "site": "Site B",
+    "horizon": 1,
+    "features": {
+      "site_a_flag": 0,
+      "window_hours": 1,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 0.0,
+      "gfs_rain_max": 0.0,
+      "gfs_wet_hours": 0,
+      "gfs_temperature_mean": 17.5,
+      "gfs_humidity_mean": 96.0,
+      "gfs_humidity_min": 96,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9975,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 21.995277777777776,
+      "own_soil_raw_latest": 9812.0,
+      "own_soil_moisture_latest": 6.0,
+      "own_soil_age_hours": 1.163888888888889,
+      "own_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "own_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "own_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "own_soil_raw_range_180m_pct": 61.41304347826087,
+      "own_soil_moisture_change_60m": -21.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9977777777777779,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 8.997777777777777,
+      "neighbor_soil_raw_latest": 8869.0,
+      "neighbor_soil_moisture_latest": 76.0,
+      "neighbor_soil_age_hours": 1.1644444444444444,
+      "neighbor_soil_raw_drop_30m_pct": -10.93183239524703,
+      "neighbor_soil_raw_drop_60m_pct": -28.424558355053577,
+      "neighbor_soil_raw_drop_180m_pct": -53.68220412406862,
+      "neighbor_soil_raw_range_180m_pct": 53.68220412406862,
+      "neighbor_soil_moisture_change_60m": -24.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.1638888888888889
+  },
+  {
+    "site": "Site B",
+    "horizon": 6,
+    "features": {
+      "site_a_flag": 0,
+      "window_hours": 6,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 0.30000000000000004,
+      "gfs_rain_max": 0.2,
+      "gfs_wet_hours": 2,
+      "gfs_temperature_mean": 17.733333333333334,
+      "gfs_humidity_mean": 95.83333333333333,
+      "gfs_humidity_min": 95,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9975,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 21.995277777777776,
+      "own_soil_raw_latest": 9812.0,
+      "own_soil_moisture_latest": 6.0,
+      "own_soil_age_hours": 1.163888888888889,
+      "own_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "own_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "own_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "own_soil_raw_range_180m_pct": 61.41304347826087,
+      "own_soil_moisture_change_60m": -21.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9977777777777779,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 8.997777777777777,
+      "neighbor_soil_raw_latest": 8869.0,
+      "neighbor_soil_moisture_latest": 76.0,
+      "neighbor_soil_age_hours": 1.1644444444444444,
+      "neighbor_soil_raw_drop_30m_pct": -10.93183239524703,
+      "neighbor_soil_raw_drop_60m_pct": -28.424558355053577,
+      "neighbor_soil_raw_drop_180m_pct": -53.68220412406862,
+      "neighbor_soil_raw_range_180m_pct": 53.68220412406862,
+      "neighbor_soil_moisture_change_60m": -24.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.8,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.4,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 6,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.1638888888888889
+  },
+  {
+    "site": "Site B",
+    "horizon": 12,
+    "features": {
+      "site_a_flag": 0,
+      "window_hours": 12,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 1.3,
+      "gfs_rain_max": 0.3,
+      "gfs_wet_hours": 8,
+      "gfs_temperature_mean": 19.7,
+      "gfs_humidity_mean": 87.25,
+      "gfs_humidity_min": 68,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9975,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 21.995277777777776,
+      "own_soil_raw_latest": 9812.0,
+      "own_soil_moisture_latest": 6.0,
+      "own_soil_age_hours": 1.163888888888889,
+      "own_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "own_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "own_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "own_soil_raw_range_180m_pct": 61.41304347826087,
+      "own_soil_moisture_change_60m": -21.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9977777777777779,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 8.997777777777777,
+      "neighbor_soil_raw_latest": 8869.0,
+      "neighbor_soil_moisture_latest": 76.0,
+      "neighbor_soil_age_hours": 1.1644444444444444,
+      "neighbor_soil_raw_drop_30m_pct": -10.93183239524703,
+      "neighbor_soil_raw_drop_60m_pct": -28.424558355053577,
+      "neighbor_soil_raw_drop_180m_pct": -53.68220412406862,
+      "neighbor_soil_raw_range_180m_pct": 53.68220412406862,
+      "neighbor_soil_moisture_change_60m": -24.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.8,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.4,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 6,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.8,
+        "gfs_humidity_pct": 93,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 7,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.8,
+        "gfs_humidity_pct": 87,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 8,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 21.3,
+        "gfs_humidity_pct": 80,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 9,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 22.7,
+        "gfs_humidity_pct": 73,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 10,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 23.4,
+        "gfs_humidity_pct": 71,
+        "gfs_rain_mm": 0.3,
+        "local_hour": 11,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.0,
+        "gfs_humidity_pct": 68,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 12,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.1638888888888889
+  },
+  {
+    "site": "Site B",
+    "horizon": 24,
+    "features": {
+      "site_a_flag": 0,
+      "window_hours": 24,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 1.6,
+      "gfs_rain_max": 0.3,
+      "gfs_wet_hours": 11,
+      "gfs_temperature_mean": 20.058333333333334,
+      "gfs_humidity_mean": 85.375,
+      "gfs_humidity_min": 65,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9975,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 21.995277777777776,
+      "own_soil_raw_latest": 9812.0,
+      "own_soil_moisture_latest": 6.0,
+      "own_soil_age_hours": 1.163888888888889,
+      "own_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "own_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "own_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "own_soil_raw_range_180m_pct": 61.41304347826087,
+      "own_soil_moisture_change_60m": -21.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9977777777777779,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 8.997777777777777,
+      "neighbor_soil_raw_latest": 8869.0,
+      "neighbor_soil_moisture_latest": 76.0,
+      "neighbor_soil_age_hours": 1.1644444444444444,
+      "neighbor_soil_raw_drop_30m_pct": -10.93183239524703,
+      "neighbor_soil_raw_drop_60m_pct": -28.424558355053577,
+      "neighbor_soil_raw_drop_180m_pct": -53.68220412406862,
+      "neighbor_soil_raw_range_180m_pct": 53.68220412406862,
+      "neighbor_soil_moisture_change_60m": -24.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.8,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.4,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 6,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.8,
+        "gfs_humidity_pct": 93,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 7,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.8,
+        "gfs_humidity_pct": 87,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 8,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 21.3,
+        "gfs_humidity_pct": 80,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 9,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 22.7,
+        "gfs_humidity_pct": 73,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 10,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 23.4,
+        "gfs_humidity_pct": 71,
+        "gfs_rain_mm": 0.3,
+        "local_hour": 11,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.0,
+        "gfs_humidity_pct": 68,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 12,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.5,
+        "gfs_humidity_pct": 65,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 13,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.4,
+        "gfs_humidity_pct": 65,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 14,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 23.4,
+        "gfs_humidity_pct": 70,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 15,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 22.0,
+        "gfs_humidity_pct": 77,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 16,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 20.4,
+        "gfs_humidity_pct": 85,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 17,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.6,
+        "gfs_humidity_pct": 88,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 18,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.3,
+        "gfs_humidity_pct": 89,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 19,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.1,
+        "gfs_humidity_pct": 90,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 20,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.6,
+        "gfs_humidity_pct": 92,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 21,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.3,
+        "gfs_humidity_pct": 93,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 22,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.8,
+        "gfs_humidity_pct": 94,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 23,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.6,
+        "gfs_humidity_pct": 94,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 0,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.1638888888888889
+  },
+  {
+    "site": "Site A",
+    "horizon": 1,
+    "features": {
+      "site_a_flag": 1,
+      "window_hours": 1,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 0.0,
+      "gfs_rain_max": 0.0,
+      "gfs_wet_hours": 0,
+      "gfs_temperature_mean": 17.3,
+      "gfs_humidity_mean": 98.0,
+      "gfs_humidity_min": 98,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9977777777777779,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 8.997777777777777,
+      "own_soil_raw_latest": 8869.0,
+      "own_soil_moisture_latest": 76.0,
+      "own_soil_age_hours": 1.1644444444444444,
+      "own_soil_raw_drop_30m_pct": -10.93183239524703,
+      "own_soil_raw_drop_60m_pct": -28.424558355053577,
+      "own_soil_raw_drop_180m_pct": -53.68220412406862,
+      "own_soil_raw_range_180m_pct": 53.68220412406862,
+      "own_soil_moisture_change_60m": -24.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9975,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 21.995277777777776,
+      "neighbor_soil_raw_latest": 9812.0,
+      "neighbor_soil_moisture_latest": 6.0,
+      "neighbor_soil_age_hours": 1.163888888888889,
+      "neighbor_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "neighbor_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "neighbor_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "neighbor_soil_raw_range_180m_pct": 61.41304347826087,
+      "neighbor_soil_moisture_change_60m": -21.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.3,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.16444444444444445
+  },
+  {
+    "site": "Site A",
+    "horizon": 6,
+    "features": {
+      "site_a_flag": 1,
+      "window_hours": 6,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 0.2,
+      "gfs_rain_max": 0.1,
+      "gfs_wet_hours": 2,
+      "gfs_temperature_mean": 17.599999999999998,
+      "gfs_humidity_mean": 97.33333333333333,
+      "gfs_humidity_min": 97,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9977777777777779,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 8.997777777777777,
+      "own_soil_raw_latest": 8869.0,
+      "own_soil_moisture_latest": 76.0,
+      "own_soil_age_hours": 1.1644444444444444,
+      "own_soil_raw_drop_30m_pct": -10.93183239524703,
+      "own_soil_raw_drop_60m_pct": -28.424558355053577,
+      "own_soil_raw_drop_180m_pct": -53.68220412406862,
+      "own_soil_raw_range_180m_pct": 53.68220412406862,
+      "own_soil_moisture_change_60m": -24.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9975,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 21.995277777777776,
+      "neighbor_soil_raw_latest": 9812.0,
+      "neighbor_soil_moisture_latest": 6.0,
+      "neighbor_soil_age_hours": 1.163888888888889,
+      "neighbor_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "neighbor_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "neighbor_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "neighbor_soil_raw_range_180m_pct": 61.41304347826087,
+      "neighbor_soil_moisture_change_60m": -21.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.3,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.4,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.7,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.2,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 6,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.16444444444444445
+  },
+  {
+    "site": "Site A",
+    "horizon": 12,
+    "features": {
+      "site_a_flag": 1,
+      "window_hours": 12,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 1.2,
+      "gfs_rain_max": 0.3,
+      "gfs_wet_hours": 8,
+      "gfs_temperature_mean": 19.758333333333333,
+      "gfs_humidity_mean": 88.0,
+      "gfs_humidity_min": 63,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9977777777777779,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 8.997777777777777,
+      "own_soil_raw_latest": 8869.0,
+      "own_soil_moisture_latest": 76.0,
+      "own_soil_age_hours": 1.1644444444444444,
+      "own_soil_raw_drop_30m_pct": -10.93183239524703,
+      "own_soil_raw_drop_60m_pct": -28.424558355053577,
+      "own_soil_raw_drop_180m_pct": -53.68220412406862,
+      "own_soil_raw_range_180m_pct": 53.68220412406862,
+      "own_soil_moisture_change_60m": -24.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9975,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 21.995277777777776,
+      "neighbor_soil_raw_latest": 9812.0,
+      "neighbor_soil_moisture_latest": 6.0,
+      "neighbor_soil_age_hours": 1.163888888888889,
+      "neighbor_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "neighbor_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "neighbor_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "neighbor_soil_raw_range_180m_pct": 61.41304347826087,
+      "neighbor_soil_moisture_change_60m": -21.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.3,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.4,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.7,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.2,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 6,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 7,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.5,
+        "gfs_humidity_pct": 91,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 8,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 21.2,
+        "gfs_humidity_pct": 83,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 9,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 23.2,
+        "gfs_humidity_pct": 72,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 10,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.2,
+        "gfs_humidity_pct": 67,
+        "gfs_rain_mm": 0.3,
+        "local_hour": 11,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.9,
+        "gfs_humidity_pct": 63,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 12,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.16444444444444445
+  },
+  {
+    "site": "Site A",
+    "horizon": 24,
+    "features": {
+      "site_a_flag": 1,
+      "window_hours": 24,
+      "gfs_age_hours": 0.0,
+      "gfs_rain_sum": 1.7000000000000002,
+      "gfs_rain_max": 0.3,
+      "gfs_wet_hours": 13,
+      "gfs_temperature_mean": 20.208333333333332,
+      "gfs_humidity_mean": 85.75,
+      "gfs_humidity_min": 59,
+      "hour_sin": 0.0,
+      "hour_cos": 1.0,
+      "own_rain_latest_mm": 0.0,
+      "own_rain_age_hours": 1.9977777777777779,
+      "own_rain_3h_mm": 0.0,
+      "own_rain_3h_coverage": 1.0,
+      "own_rain_6h_mm": 0.0,
+      "own_rain_6h_coverage": 1.0,
+      "own_last_wet_age_hours": 8.997777777777777,
+      "own_soil_raw_latest": 8869.0,
+      "own_soil_moisture_latest": 76.0,
+      "own_soil_age_hours": 1.1644444444444444,
+      "own_soil_raw_drop_30m_pct": -10.93183239524703,
+      "own_soil_raw_drop_60m_pct": -28.424558355053577,
+      "own_soil_raw_drop_180m_pct": -53.68220412406862,
+      "own_soil_raw_range_180m_pct": 53.68220412406862,
+      "own_soil_moisture_change_60m": -24.0,
+      "neighbor_rain_latest_mm": 0.0,
+      "neighbor_rain_age_hours": 1.9975,
+      "neighbor_rain_3h_mm": 0.0,
+      "neighbor_rain_3h_coverage": 1.0,
+      "neighbor_rain_6h_mm": 0.0,
+      "neighbor_rain_6h_coverage": 1.0,
+      "neighbor_last_wet_age_hours": 21.995277777777776,
+      "neighbor_soil_raw_latest": 9812.0,
+      "neighbor_soil_moisture_latest": 6.0,
+      "neighbor_soil_age_hours": 1.163888888888889,
+      "neighbor_soil_raw_drop_30m_pct": -0.5327868852459017,
+      "neighbor_soil_raw_drop_60m_pct": -6.8961760540363874,
+      "neighbor_soil_raw_drop_180m_pct": -0.6152584085315833,
+      "neighbor_soil_raw_range_180m_pct": 61.41304347826087,
+      "neighbor_soil_moisture_change_60m": -21.0
+    },
+    "hourly_forecasts": [
+      {
+        "gfs_temperature_c": 17.3,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 1,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.4,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 2,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 3,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.5,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 4,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.7,
+        "gfs_humidity_pct": 97,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 5,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.2,
+        "gfs_humidity_pct": 98,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 6,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.5,
+        "gfs_humidity_pct": 96,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 7,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.5,
+        "gfs_humidity_pct": 91,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 8,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 21.2,
+        "gfs_humidity_pct": 83,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 9,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 23.2,
+        "gfs_humidity_pct": 72,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 10,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.2,
+        "gfs_humidity_pct": 67,
+        "gfs_rain_mm": 0.3,
+        "local_hour": 11,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.9,
+        "gfs_humidity_pct": 63,
+        "gfs_rain_mm": 0.2,
+        "local_hour": 12,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 25.4,
+        "gfs_humidity_pct": 59,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 13,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 25.2,
+        "gfs_humidity_pct": 60,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 14,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 24.3,
+        "gfs_humidity_pct": 65,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 15,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 22.7,
+        "gfs_humidity_pct": 74,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 16,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 20.6,
+        "gfs_humidity_pct": 85,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 17,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.9,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.1,
+        "local_hour": 18,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 19.0,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 19,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.8,
+        "gfs_humidity_pct": 94,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 20,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.8,
+        "gfs_humidity_pct": 91,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 21,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.3,
+        "gfs_humidity_pct": 94,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 22,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 18.0,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 23,
+        "forecast_day": 1
+      },
+      {
+        "gfs_temperature_c": 17.9,
+        "gfs_humidity_pct": 95,
+        "gfs_rain_mm": 0.0,
+        "local_hour": 0,
+        "forecast_day": 1
+      }
+    ],
+    "max_context_available_offset_hours": -0.16444444444444445
+  }
+]

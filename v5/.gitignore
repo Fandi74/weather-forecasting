@@ -1,5 +1,0 @@
-.venv/
-__pycache__/
-.matplotlib_cache/
-.test_temp/
-output/*/jobs/
